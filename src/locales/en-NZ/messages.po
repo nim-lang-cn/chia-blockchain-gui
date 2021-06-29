@@ -970,7 +970,7 @@ msgstr "Network Name"
 msgid "New Address"
 msgstr "New Address"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:107
 msgid "New Passcode"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr "Nickname"
 msgid "No"
 msgstr "No"
 
-#: src/middleware/middleware_api.jsx:285
+#: src/middleware/middleware_api.jsx:289
 msgid "No 24 word seed, since this key is imported."
 msgstr "No 24 word seed, since this key is imported."
 
@@ -1068,7 +1068,7 @@ msgstr "Offer"
 msgid "Offers Created"
 msgstr "Offers Created"
 
-#: src/components/settings/Settings.tsx:68
+#: src/components/settings/Settings.tsx:95
 msgid "Old Passcode"
 msgstr ""
 
@@ -1080,11 +1080,12 @@ msgstr "On average there is one minute between each transaction block. Unless th
 msgid "Outgoing"
 msgstr "Outgoing"
 
-#: src/components/settings/Settings.tsx:49
+#: src/components/settings/Settings.tsx:62
 msgid "Passcode Settings"
 msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:35
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
 msgid "Password"
 msgstr ""
 
@@ -1312,11 +1313,11 @@ msgstr "Previous Header Hash"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Private key with public fingerprint {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:249
+#: src/middleware/middleware_api.jsx:253
 msgid "Private key {0}"
 msgstr "Private key {0}"
 
-#: src/middleware/middleware_api.jsx:259
+#: src/middleware/middleware_api.jsx:263
 msgid "Private key:"
 msgstr "Private key:"
 
@@ -1332,7 +1333,7 @@ msgstr "Proofs Found"
 msgid "Pubkey"
 msgstr "Pubkey"
 
-#: src/middleware/middleware_api.jsx:267
+#: src/middleware/middleware_api.jsx:271
 msgid "Public key:"
 msgstr "Public key:"
 
@@ -1381,7 +1382,7 @@ msgstr "Rate Limited Options"
 msgid "Rate Limited User Wallet Setup"
 msgstr "Rate Limited User Wallet Setup"
 
-#: src/components/settings/Settings.tsx:73
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passcode"
 msgstr ""
 
@@ -1452,7 +1453,7 @@ msgstr "Second temporary folder location"
 msgid "See private key"
 msgstr "See private key"
 
-#: src/middleware/middleware_api.jsx:277
+#: src/middleware/middleware_api.jsx:281
 msgid "Seed:"
 msgstr "Seed:"
 
@@ -1515,7 +1516,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Send your pubkey to your Rate Limited Wallet admin:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:93
+#: src/components/settings/Settings.tsx:120
 msgid "Settings"
 msgstr ""
 

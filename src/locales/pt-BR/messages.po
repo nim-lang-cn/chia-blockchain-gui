@@ -970,7 +970,7 @@ msgstr "Nome da rede"
 msgid "New Address"
 msgstr "Novo endereço"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:107
 msgid "New Passcode"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr "Apelido"
 msgid "No"
 msgstr "Não"
 
-#: src/middleware/middleware_api.jsx:285
+#: src/middleware/middleware_api.jsx:289
 msgid "No 24 word seed, since this key is imported."
 msgstr "Sem semente de 24 palavras, uma vez que esta chave é importada."
 
@@ -1068,7 +1068,7 @@ msgstr "Oferta"
 msgid "Offers Created"
 msgstr "Ofertas Criadas"
 
-#: src/components/settings/Settings.tsx:68
+#: src/components/settings/Settings.tsx:95
 msgid "Old Passcode"
 msgstr ""
 
@@ -1080,11 +1080,12 @@ msgstr "Em média, há um minuto entre cada bloco de transação. Não ocorrendo
 msgid "Outgoing"
 msgstr "Enviado"
 
-#: src/components/settings/Settings.tsx:49
+#: src/components/settings/Settings.tsx:62
 msgid "Passcode Settings"
 msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:35
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
 msgid "Password"
 msgstr ""
 
@@ -1312,11 +1313,11 @@ msgstr "Hash do cabeçalho anterior"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Chave privada com impressão digital pública {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:249
+#: src/middleware/middleware_api.jsx:253
 msgid "Private key {0}"
 msgstr "Chave privada {0}"
 
-#: src/middleware/middleware_api.jsx:259
+#: src/middleware/middleware_api.jsx:263
 msgid "Private key:"
 msgstr "Chave privada:"
 
@@ -1332,7 +1333,7 @@ msgstr "Provas encontradas"
 msgid "Pubkey"
 msgstr "Pubkey"
 
-#: src/middleware/middleware_api.jsx:267
+#: src/middleware/middleware_api.jsx:271
 msgid "Public key:"
 msgstr "Chave pública:"
 
@@ -1381,7 +1382,7 @@ msgstr "Opções de taxa limitada"
 msgid "Rate Limited User Wallet Setup"
 msgstr "Taxa de configuração da carteira de usuário limitada"
 
-#: src/components/settings/Settings.tsx:73
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passcode"
 msgstr ""
 
@@ -1452,7 +1453,7 @@ msgstr "Localização da segunda pasta temporária"
 msgid "See private key"
 msgstr "Ver chave privada"
 
-#: src/middleware/middleware_api.jsx:277
+#: src/middleware/middleware_api.jsx:281
 msgid "Seed:"
 msgstr "Semente:"
 
@@ -1515,7 +1516,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Envie sua pubkey para a sua Carteira de Taxa Limitada:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:93
+#: src/components/settings/Settings.tsx:120
 msgid "Settings"
 msgstr ""
 

@@ -970,7 +970,7 @@ msgstr "Nazwa sieci"
 msgid "New Address"
 msgstr "Nowy adres"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:107
 msgid "New Passcode"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr "Pseudonim"
 msgid "No"
 msgstr "Nie"
 
-#: src/middleware/middleware_api.jsx:285
+#: src/middleware/middleware_api.jsx:289
 msgid "No 24 word seed, since this key is imported."
 msgstr "Brak ziarna (24 słowa), ponieważ ten klucz jest zaimportowany."
 
@@ -1068,7 +1068,7 @@ msgstr "Oferta"
 msgid "Offers Created"
 msgstr "Stworzone oferty"
 
-#: src/components/settings/Settings.tsx:68
+#: src/components/settings/Settings.tsx:95
 msgid "Old Passcode"
 msgstr ""
 
@@ -1080,11 +1080,12 @@ msgstr ""
 msgid "Outgoing"
 msgstr "Wychodzące"
 
-#: src/components/settings/Settings.tsx:49
+#: src/components/settings/Settings.tsx:62
 msgid "Passcode Settings"
 msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:35
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
 msgid "Password"
 msgstr ""
 
@@ -1312,11 +1313,11 @@ msgstr "Hasz poprzedniego bloku"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Klucz prywatny z publicznym odciskiem {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:249
+#: src/middleware/middleware_api.jsx:253
 msgid "Private key {0}"
 msgstr "Klucz prywatny {0}"
 
-#: src/middleware/middleware_api.jsx:259
+#: src/middleware/middleware_api.jsx:263
 msgid "Private key:"
 msgstr "Klucz prywatny:"
 
@@ -1332,7 +1333,7 @@ msgstr "Znalezione dowody"
 msgid "Pubkey"
 msgstr "Klucz publiczny"
 
-#: src/middleware/middleware_api.jsx:267
+#: src/middleware/middleware_api.jsx:271
 msgid "Public key:"
 msgstr "Klucz publiczny:"
 
@@ -1381,7 +1382,7 @@ msgstr "Opcje ograniczenia czasowego"
 msgid "Rate Limited User Wallet Setup"
 msgstr "Oceń ograniczoną konfigurację portfela użytkownika"
 
-#: src/components/settings/Settings.tsx:73
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passcode"
 msgstr ""
 
@@ -1452,7 +1453,7 @@ msgstr "Drugi folder tymczasowy"
 msgid "See private key"
 msgstr "Zobacz klucz prywatny"
 
-#: src/middleware/middleware_api.jsx:277
+#: src/middleware/middleware_api.jsx:281
 msgid "Seed:"
 msgstr "Ziarno:"
 
@@ -1515,7 +1516,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Wyślij swój klucz publiczny do administratora portfela z ograniczeniami dotyczącymi stawek:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:93
+#: src/components/settings/Settings.tsx:120
 msgid "Settings"
 msgstr ""
 

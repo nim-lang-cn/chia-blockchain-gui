@@ -970,7 +970,7 @@ msgstr "Názov siete"
 msgid "New Address"
 msgstr "Nová Adresa"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:107
 msgid "New Passcode"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr "Prezývka"
 msgid "No"
 msgstr "Nie"
 
-#: src/middleware/middleware_api.jsx:285
+#: src/middleware/middleware_api.jsx:289
 msgid "No 24 word seed, since this key is imported."
 msgstr "Žiadny 24-slovný seed, pretože tento kľúč je importovaný."
 
@@ -1068,7 +1068,7 @@ msgstr "Ponuka"
 msgid "Offers Created"
 msgstr "Vytvorené Ponuky"
 
-#: src/components/settings/Settings.tsx:68
+#: src/components/settings/Settings.tsx:95
 msgid "Old Passcode"
 msgstr ""
 
@@ -1080,11 +1080,12 @@ msgstr "Priemerný čas medzi jednotlivými blokmi transakcií je jedna minúta.
 msgid "Outgoing"
 msgstr "Odchádzajúce"
 
-#: src/components/settings/Settings.tsx:49
+#: src/components/settings/Settings.tsx:62
 msgid "Passcode Settings"
 msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:35
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
 msgid "Password"
 msgstr ""
 
@@ -1312,11 +1313,11 @@ msgstr "Hash predchádzajúceho záhlavia"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Privátny kľúč s verejným odtlačkom {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:249
+#: src/middleware/middleware_api.jsx:253
 msgid "Private key {0}"
 msgstr "Privátny kľúč {0}"
 
-#: src/middleware/middleware_api.jsx:259
+#: src/middleware/middleware_api.jsx:263
 msgid "Private key:"
 msgstr "Privátny kľúč:"
 
@@ -1332,7 +1333,7 @@ msgstr "Nájdené dôkazy"
 msgid "Pubkey"
 msgstr "Verejný kľúč"
 
-#: src/middleware/middleware_api.jsx:267
+#: src/middleware/middleware_api.jsx:271
 msgid "Public key:"
 msgstr "Verejný kľúč:"
 
@@ -1381,7 +1382,7 @@ msgstr "Možnosti Obmedzenej Sadzby"
 msgid "Rate Limited User Wallet Setup"
 msgstr "Nastavenia Používateľskej Peňaženky S Obmedzenou Sadzbou"
 
-#: src/components/settings/Settings.tsx:73
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passcode"
 msgstr ""
 
@@ -1452,7 +1453,7 @@ msgstr "Druhý dočasný adresár"
 msgid "See private key"
 msgstr "Zobraziť privátny kľúč"
 
-#: src/middleware/middleware_api.jsx:277
+#: src/middleware/middleware_api.jsx:281
 msgid "Seed:"
 msgstr "Zrnko:"
 
@@ -1515,7 +1516,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:93
+#: src/components/settings/Settings.tsx:120
 msgid "Settings"
 msgstr ""
 

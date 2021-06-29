@@ -970,7 +970,7 @@ msgstr "Назва мережі"
 msgid "New Address"
 msgstr "Нова адреса"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:107
 msgid "New Passcode"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr "Прізвисько"
 msgid "No"
 msgstr "Ні"
 
-#: src/middleware/middleware_api.jsx:285
+#: src/middleware/middleware_api.jsx:289
 msgid "No 24 word seed, since this key is imported."
 msgstr "Відсутні 24 ключових слова, оскільки ключ імпортовано."
 
@@ -1068,7 +1068,7 @@ msgstr "Пропозиція"
 msgid "Offers Created"
 msgstr "Заявки створено"
 
-#: src/components/settings/Settings.tsx:68
+#: src/components/settings/Settings.tsx:95
 msgid "Old Passcode"
 msgstr ""
 
@@ -1080,11 +1080,12 @@ msgstr "У середньому між кожним блоком транзак�
 msgid "Outgoing"
 msgstr "Вихідні"
 
-#: src/components/settings/Settings.tsx:49
+#: src/components/settings/Settings.tsx:62
 msgid "Passcode Settings"
 msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:35
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
 msgid "Password"
 msgstr ""
 
@@ -1312,11 +1313,11 @@ msgstr "Хеш попереднього заголовка"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Закритий ключ з публічним відбитком пальця {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:249
+#: src/middleware/middleware_api.jsx:253
 msgid "Private key {0}"
 msgstr "Закритий ключ {0}"
 
-#: src/middleware/middleware_api.jsx:259
+#: src/middleware/middleware_api.jsx:263
 msgid "Private key:"
 msgstr "Закритий ключ:"
 
@@ -1332,7 +1333,7 @@ msgstr "Доказів знайдено"
 msgid "Pubkey"
 msgstr "Публічний ключ"
 
-#: src/middleware/middleware_api.jsx:267
+#: src/middleware/middleware_api.jsx:271
 msgid "Public key:"
 msgstr "Публічний ключ:"
 
@@ -1381,7 +1382,7 @@ msgstr "Опції обмеження частоти"
 msgid "Rate Limited User Wallet Setup"
 msgstr "Налаштування гаманця з обмеженням частоти"
 
-#: src/components/settings/Settings.tsx:73
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passcode"
 msgstr ""
 
@@ -1452,7 +1453,7 @@ msgstr "Розташування другої тимчасової теки"
 msgid "See private key"
 msgstr "Переглянути приватний ключ"
 
-#: src/middleware/middleware_api.jsx:277
+#: src/middleware/middleware_api.jsx:281
 msgid "Seed:"
 msgstr "Фраза:"
 
@@ -1515,7 +1516,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Надішліть свій публічний ключ адміністратору вашого гаманця з обмеженням частоти:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:93
+#: src/components/settings/Settings.tsx:120
 msgid "Settings"
 msgstr ""
 

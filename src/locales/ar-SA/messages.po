@@ -970,7 +970,7 @@ msgstr "إسم الشبكة"
 msgid "New Address"
 msgstr "عنوان جديد"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:107
 msgid "New Passcode"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr "الإسم المستعار"
 msgid "No"
 msgstr "لايوجد"
 
-#: src/middleware/middleware_api.jsx:285
+#: src/middleware/middleware_api.jsx:289
 msgid "No 24 word seed, since this key is imported."
 msgstr "لا يوجد بذور 24 كلمة، لأن هذا المفتاح مستورد."
 
@@ -1068,7 +1068,7 @@ msgstr "عرض"
 msgid "Offers Created"
 msgstr "عروض تم إنشاؤها"
 
-#: src/components/settings/Settings.tsx:68
+#: src/components/settings/Settings.tsx:95
 msgid "Old Passcode"
 msgstr ""
 
@@ -1080,11 +1080,12 @@ msgstr "في المتوسط هناك دقيقة واحدة بين كل كتلة 
 msgid "Outgoing"
 msgstr "الصادرة"
 
-#: src/components/settings/Settings.tsx:49
+#: src/components/settings/Settings.tsx:62
 msgid "Passcode Settings"
 msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:35
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
 msgid "Password"
 msgstr ""
 
@@ -1312,11 +1313,11 @@ msgstr "تجزئة العنوان السابق"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "مفتاح خاص ببصمة إصبع عامة {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:249
+#: src/middleware/middleware_api.jsx:253
 msgid "Private key {0}"
 msgstr "المفتاح الخاص {0}"
 
-#: src/middleware/middleware_api.jsx:259
+#: src/middleware/middleware_api.jsx:263
 msgid "Private key:"
 msgstr "المفتاح الخاص:"
 
@@ -1332,7 +1333,7 @@ msgstr "ثم العثور على إثبات المساحة"
 msgid "Pubkey"
 msgstr "المفتاح العمومي"
 
-#: src/middleware/middleware_api.jsx:267
+#: src/middleware/middleware_api.jsx:271
 msgid "Public key:"
 msgstr "المفتاح العمومي"
 
@@ -1381,7 +1382,7 @@ msgstr "قيم خيارات محدودة"
 msgid "Rate Limited User Wallet Setup"
 msgstr "معدل إعداد محفظة المستخدم المحدود"
 
-#: src/components/settings/Settings.tsx:73
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passcode"
 msgstr ""
 
@@ -1452,7 +1453,7 @@ msgstr "موقع المجلد المؤقت الثاني"
 msgid "See private key"
 msgstr "عرض المفتاح الخاص"
 
-#: src/middleware/middleware_api.jsx:277
+#: src/middleware/middleware_api.jsx:281
 msgid "Seed:"
 msgstr "توزيع الجدول:"
 
@@ -1515,7 +1516,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "أرسل المحفظة الخاصة بك إلى مدير المحفظة المحدودة المعدل:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:93
+#: src/components/settings/Settings.tsx:120
 msgid "Settings"
 msgstr ""
 

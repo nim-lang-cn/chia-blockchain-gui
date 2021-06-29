@@ -970,7 +970,7 @@ msgstr "Όνομα Δικτύου"
 msgid "New Address"
 msgstr "Νέα διεύθυνση"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:107
 msgid "New Passcode"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr "Ψευδώνυμο"
 msgid "No"
 msgstr "Όχι"
 
-#: src/middleware/middleware_api.jsx:285
+#: src/middleware/middleware_api.jsx:289
 msgid "No 24 word seed, since this key is imported."
 msgstr "Κανένα seed 24 λέξεων, καθώς αυτό το κλειδί έχει εισαχθεί."
 
@@ -1068,7 +1068,7 @@ msgstr "Προσφορά"
 msgid "Offers Created"
 msgstr "Δημιουργήθηκαν Προσφορές"
 
-#: src/components/settings/Settings.tsx:68
+#: src/components/settings/Settings.tsx:95
 msgid "Old Passcode"
 msgstr ""
 
@@ -1080,11 +1080,12 @@ msgstr "Κατά μέσο όρο υπάρχει ένα λεπτό μεταξύ �
 msgid "Outgoing"
 msgstr "Εξερχόμενες"
 
-#: src/components/settings/Settings.tsx:49
+#: src/components/settings/Settings.tsx:62
 msgid "Passcode Settings"
 msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:35
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
 msgid "Password"
 msgstr ""
 
@@ -1312,11 +1313,11 @@ msgstr "Προηγούμενη Header Hash"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Ιδιωτικό κλειδί με δημόσιο αποτύπωμα {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:249
+#: src/middleware/middleware_api.jsx:253
 msgid "Private key {0}"
 msgstr "Ιδιωτικό κλειδί {0}"
 
-#: src/middleware/middleware_api.jsx:259
+#: src/middleware/middleware_api.jsx:263
 msgid "Private key:"
 msgstr "Ιδιωτικό κλειδί:"
 
@@ -1332,7 +1333,7 @@ msgstr "Βρέθηκαν Αποδεικτικά"
 msgid "Pubkey"
 msgstr "Pubkey"
 
-#: src/middleware/middleware_api.jsx:267
+#: src/middleware/middleware_api.jsx:271
 msgid "Public key:"
 msgstr "Δημόσιο κλειδί:"
 
@@ -1381,7 +1382,7 @@ msgstr "Rate Limited Επιλογές"
 msgid "Rate Limited User Wallet Setup"
 msgstr "Rate Limited User Wallet Setup"
 
-#: src/components/settings/Settings.tsx:73
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passcode"
 msgstr ""
 
@@ -1452,7 +1453,7 @@ msgstr "Δεύτερη τοποθεσία προσωρινού φακέλου"
 msgid "See private key"
 msgstr "Προβολή ιδιωτικού κλειδιού"
 
-#: src/middleware/middleware_api.jsx:277
+#: src/middleware/middleware_api.jsx:281
 msgid "Seed:"
 msgstr "Seed:"
 
@@ -1515,7 +1516,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Στείλτε το δημόσιο κλειδί σας στον διαχειριστή του Rate Limited Wallet:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:93
+#: src/components/settings/Settings.tsx:120
 msgid "Settings"
 msgstr ""
 

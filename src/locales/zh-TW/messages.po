@@ -971,7 +971,11 @@ msgid "New Address"
 msgstr "新位址"
 
 #: src/components/settings/Settings.tsx:107
-msgid "New Passcode"
+#~ msgid "New Passcode"
+#~ msgstr ""
+
+#: src/components/settings/Settings.tsx:107
+msgid "New Passphrase"
 msgstr ""
 
 #: src/components/wallet/WalletAdd.tsx:32
@@ -1069,7 +1073,11 @@ msgid "Offers Created"
 msgstr "已建立提案"
 
 #: src/components/settings/Settings.tsx:95
-msgid "Old Passcode"
+#~ msgid "Old Passcode"
+#~ msgstr ""
+
+#: src/components/settings/Settings.tsx:95
+msgid "Old Passphrase"
 msgstr ""
 
 #: src/components/wallet/standard/WalletStandard.tsx:312
@@ -1081,13 +1089,22 @@ msgid "Outgoing"
 msgstr "匯出"
 
 #: src/components/settings/Settings.tsx:62
-msgid "Passcode Settings"
+#~ msgid "Passcode Settings"
+#~ msgstr ""
+
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
+msgid "Passphrase"
+msgstr ""
+
+#: src/components/settings/Settings.tsx:62
+msgid "Passphrase Settings"
 msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
 #: src/components/settings/Settings.tsx:74
-msgid "Password"
-msgstr ""
+#~ msgid "Password"
+#~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:8
 #~ msgid "Password login test."
@@ -1133,8 +1150,12 @@ msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "請輸入 0 費用。 RL 尚未支援正向費用。"
 
 #: src/components/app/AppPassLogin.tsx:22
-msgid "Please enter a password"
+msgid "Please enter a passphrase"
 msgstr ""
+
+#: src/components/app/AppPassLogin.tsx:22
+#~ msgid "Please enter a password"
+#~ msgstr ""
 
 #: src/components/wallet/create/createRLAdmin.jsx:146
 msgid "Please enter a valid initial coin amount"
@@ -1383,7 +1404,11 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "速率限制使用者錢包設定"
 
 #: src/components/settings/Settings.tsx:100
-msgid "Re-enter Old Passcode"
+#~ msgid "Re-enter Old Passcode"
+#~ msgstr ""
+
+#: src/components/settings/Settings.tsx:100
+msgid "Re-enter Old Passphrase"
 msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:453

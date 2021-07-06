@@ -971,8 +971,12 @@ msgid "New Address"
 msgstr "New Address"
 
 #: src/components/settings/Settings.tsx:107
-msgid "New Passcode"
-msgstr "New Passcode"
+#~ msgid "New Passcode"
+#~ msgstr "New Passcode"
+
+#: src/components/settings/Settings.tsx:107
+msgid "New Passphrase"
+msgstr "New Passphrase"
 
 #: src/components/wallet/WalletAdd.tsx:32
 msgid "New Wallet"
@@ -1069,8 +1073,12 @@ msgid "Offers Created"
 msgstr "Offers Created"
 
 #: src/components/settings/Settings.tsx:95
-msgid "Old Passcode"
-msgstr "Old Passcode"
+#~ msgid "Old Passcode"
+#~ msgstr "Old Passcode"
+
+#: src/components/settings/Settings.tsx:95
+msgid "Old Passphrase"
+msgstr "Old Passphrase"
 
 #: src/components/wallet/standard/WalletStandard.tsx:312
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
@@ -1081,13 +1089,22 @@ msgid "Outgoing"
 msgstr "Outgoing"
 
 #: src/components/settings/Settings.tsx:62
-msgid "Passcode Settings"
-msgstr "Passcode Settings"
+#~ msgid "Passcode Settings"
+#~ msgstr "Passcode Settings"
 
 #: src/components/app/AppPassLogin.tsx:34
 #: src/components/settings/Settings.tsx:74
-msgid "Password"
-msgstr "Password"
+msgid "Passphrase"
+msgstr "Passphrase"
+
+#: src/components/settings/Settings.tsx:62
+msgid "Passphrase Settings"
+msgstr "Passphrase Settings"
+
+#: src/components/app/AppPassLogin.tsx:34
+#: src/components/settings/Settings.tsx:74
+#~ msgid "Password"
+#~ msgstr "Password"
 
 #: src/components/app/AppPassLogin.tsx:8
 #~ msgid "Password login test."
@@ -1133,8 +1150,12 @@ msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Please enter 0 fee. Positive fees not supported yet for RL."
 
 #: src/components/app/AppPassLogin.tsx:22
-msgid "Please enter a password"
-msgstr "Please enter a password"
+msgid "Please enter a passphrase"
+msgstr "Please enter a passphrase"
+
+#: src/components/app/AppPassLogin.tsx:22
+#~ msgid "Please enter a password"
+#~ msgstr "Please enter a password"
 
 #: src/components/wallet/create/createRLAdmin.jsx:146
 msgid "Please enter a valid initial coin amount"
@@ -1383,8 +1404,12 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "Rate Limited User Wallet Setup"
 
 #: src/components/settings/Settings.tsx:100
-msgid "Re-enter Old Passcode"
-msgstr "Re-enter Old Passcode"
+#~ msgid "Re-enter Old Passcode"
+#~ msgstr "Re-enter Old Passcode"
+
+#: src/components/settings/Settings.tsx:100
+msgid "Re-enter Old Passphrase"
+msgstr "Re-enter Old Passphrase"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:453
 #: src/components/wallet/standard/WalletStandard.tsx:369

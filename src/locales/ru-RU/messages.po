@@ -1146,7 +1146,7 @@ msgstr "Новый адрес"
 #~ msgid "New Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:107
+#: src/components/settings/Settings.tsx:137
 msgid "New Passphrase"
 msgstr ""
 
@@ -1169,7 +1169,7 @@ msgstr "Псевдоним"
 msgid "No"
 msgstr "Нет"
 
-#: src/middleware/middleware_api.jsx:289
+#: src/middleware/middleware_api.jsx:298
 msgid "No 24 word seed, since this key is imported."
 msgstr "Нет 24 слов семя, так как этот ключ импортируется."
 
@@ -1248,7 +1248,7 @@ msgstr "Предложение создано"
 #~ msgid "Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:95
+#: src/components/settings/Settings.tsx:125
 msgid "Old Passphrase"
 msgstr ""
 
@@ -1265,11 +1265,11 @@ msgstr "Исходящие"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:74
+#: src/components/settings/Settings.tsx:104
 msgid "Passphrase"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:62
+#: src/components/settings/Settings.tsx:92
 msgid "Passphrase Settings"
 msgstr ""
 
@@ -1506,11 +1506,11 @@ msgstr "Хэш предыдущего блока"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Приватный ключ с публичным отпечатком {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:253
+#: src/middleware/middleware_api.jsx:262
 msgid "Private key {0}"
 msgstr "Закрытый ключ {0}"
 
-#: src/middleware/middleware_api.jsx:263
+#: src/middleware/middleware_api.jsx:272
 msgid "Private key:"
 msgstr "Закрытый ключ:"
 
@@ -1526,7 +1526,7 @@ msgstr "Доказательств найдено"
 msgid "Pubkey"
 msgstr "Публичный ключ"
 
-#: src/middleware/middleware_api.jsx:271
+#: src/middleware/middleware_api.jsx:280
 msgid "Public key:"
 msgstr "Открытый ключ:"
 
@@ -1579,7 +1579,7 @@ msgstr "Настройка кошелька пользователя с огра
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:100
+#: src/components/settings/Settings.tsx:130
 msgid "Re-enter Old Passphrase"
 msgstr ""
 
@@ -1650,7 +1650,7 @@ msgstr "Расположение второй временной папки"
 msgid "See private key"
 msgstr "Посмотреть закрытый ключ"
 
-#: src/middleware/middleware_api.jsx:281
+#: src/middleware/middleware_api.jsx:290
 msgid "Seed:"
 msgstr "Семя:"
 
@@ -1713,7 +1713,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Отправьте этот публичный ключ администратору вашего кошелька с ограниченной скоростью вывода средств:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:120
+#: src/components/settings/Settings.tsx:150
 msgid "Settings"
 msgstr ""
 

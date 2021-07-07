@@ -974,7 +974,7 @@ msgstr "Нова адреса"
 #~ msgid "New Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:107
+#: src/components/settings/Settings.tsx:137
 msgid "New Passphrase"
 msgstr ""
 
@@ -997,7 +997,7 @@ msgstr "Надимак"
 msgid "No"
 msgstr "Не"
 
-#: src/middleware/middleware_api.jsx:289
+#: src/middleware/middleware_api.jsx:298
 msgid "No 24 word seed, since this key is imported."
 msgstr "Нема 24 речи, јер је кључ увезен."
 
@@ -1076,7 +1076,7 @@ msgstr "Креиране понуде"
 #~ msgid "Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:95
+#: src/components/settings/Settings.tsx:125
 msgid "Old Passphrase"
 msgstr ""
 
@@ -1093,11 +1093,11 @@ msgstr "Одлазни"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:74
+#: src/components/settings/Settings.tsx:104
 msgid "Passphrase"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:62
+#: src/components/settings/Settings.tsx:92
 msgid "Passphrase Settings"
 msgstr ""
 
@@ -1334,11 +1334,11 @@ msgstr "Претходно хеш заглавље"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Приватни кључ са јавним потписом {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:253
+#: src/middleware/middleware_api.jsx:262
 msgid "Private key {0}"
 msgstr "Приватни кључ {0}"
 
-#: src/middleware/middleware_api.jsx:263
+#: src/middleware/middleware_api.jsx:272
 msgid "Private key:"
 msgstr "Приватни кључ:"
 
@@ -1354,7 +1354,7 @@ msgstr "Пронађени докази"
 msgid "Pubkey"
 msgstr "Јавни кључ"
 
-#: src/middleware/middleware_api.jsx:271
+#: src/middleware/middleware_api.jsx:280
 msgid "Public key:"
 msgstr "Јавни кључ:"
 
@@ -1407,7 +1407,7 @@ msgstr "Подешавање ограниченог корисничког но�
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:100
+#: src/components/settings/Settings.tsx:130
 msgid "Re-enter Old Passphrase"
 msgstr ""
 
@@ -1478,7 +1478,7 @@ msgstr "Локација другог привременог фолдера"
 msgid "See private key"
 msgstr "Прикажи приватни кључ"
 
-#: src/middleware/middleware_api.jsx:281
+#: src/middleware/middleware_api.jsx:290
 msgid "Seed:"
 msgstr "Семе:"
 
@@ -1541,7 +1541,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Пошаљи јавни кључ администратору твог ограниченог новчаника:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:120
+#: src/components/settings/Settings.tsx:150
 msgid "Settings"
 msgstr ""
 

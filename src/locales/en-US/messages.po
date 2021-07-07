@@ -974,7 +974,7 @@ msgstr "New Address"
 #~ msgid "New Passcode"
 #~ msgstr "New Passcode"
 
-#: src/components/settings/Settings.tsx:107
+#: src/components/settings/Settings.tsx:137
 msgid "New Passphrase"
 msgstr "New Passphrase"
 
@@ -997,7 +997,7 @@ msgstr "Nickname"
 msgid "No"
 msgstr "No"
 
-#: src/middleware/middleware_api.jsx:289
+#: src/middleware/middleware_api.jsx:298
 msgid "No 24 word seed, since this key is imported."
 msgstr "No 24 word seed, since this key is imported."
 
@@ -1076,7 +1076,7 @@ msgstr "Offers Created"
 #~ msgid "Old Passcode"
 #~ msgstr "Old Passcode"
 
-#: src/components/settings/Settings.tsx:95
+#: src/components/settings/Settings.tsx:125
 msgid "Old Passphrase"
 msgstr "Old Passphrase"
 
@@ -1093,11 +1093,11 @@ msgstr "Outgoing"
 #~ msgstr "Passcode Settings"
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:74
+#: src/components/settings/Settings.tsx:104
 msgid "Passphrase"
 msgstr "Passphrase"
 
-#: src/components/settings/Settings.tsx:62
+#: src/components/settings/Settings.tsx:92
 msgid "Passphrase Settings"
 msgstr "Passphrase Settings"
 
@@ -1334,11 +1334,11 @@ msgstr "Previous Header Hash"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Private key with public fingerprint {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:253
+#: src/middleware/middleware_api.jsx:262
 msgid "Private key {0}"
 msgstr "Private key {0}"
 
-#: src/middleware/middleware_api.jsx:263
+#: src/middleware/middleware_api.jsx:272
 msgid "Private key:"
 msgstr "Private key:"
 
@@ -1354,7 +1354,7 @@ msgstr "Proofs Found"
 msgid "Pubkey"
 msgstr "Pubkey"
 
-#: src/middleware/middleware_api.jsx:271
+#: src/middleware/middleware_api.jsx:280
 msgid "Public key:"
 msgstr "Public key:"
 
@@ -1407,7 +1407,7 @@ msgstr "Rate Limited User Wallet Setup"
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr "Re-enter Old Passcode"
 
-#: src/components/settings/Settings.tsx:100
+#: src/components/settings/Settings.tsx:130
 msgid "Re-enter Old Passphrase"
 msgstr "Re-enter Old Passphrase"
 
@@ -1478,7 +1478,7 @@ msgstr "Second temporary folder location"
 msgid "See private key"
 msgstr "See private key"
 
-#: src/middleware/middleware_api.jsx:281
+#: src/middleware/middleware_api.jsx:290
 msgid "Seed:"
 msgstr "Seed:"
 
@@ -1541,7 +1541,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Send your pubkey to your Rate Limited Wallet admin:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:120
+#: src/components/settings/Settings.tsx:150
 msgid "Settings"
 msgstr "Settings"
 

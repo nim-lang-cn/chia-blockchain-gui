@@ -974,7 +974,7 @@ msgstr "Nueva dirección"
 #~ msgid "New Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:107
+#: src/components/settings/Settings.tsx:137
 msgid "New Passphrase"
 msgstr ""
 
@@ -997,7 +997,7 @@ msgstr "Apodo"
 msgid "No"
 msgstr "No"
 
-#: src/middleware/middleware_api.jsx:289
+#: src/middleware/middleware_api.jsx:298
 msgid "No 24 word seed, since this key is imported."
 msgstr "No hay semilla de 24 palabras, ya que esta llave es importada."
 
@@ -1076,7 +1076,7 @@ msgstr "Oferta creada"
 #~ msgid "Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:95
+#: src/components/settings/Settings.tsx:125
 msgid "Old Passphrase"
 msgstr ""
 
@@ -1093,11 +1093,11 @@ msgstr "Enviado"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:74
+#: src/components/settings/Settings.tsx:104
 msgid "Passphrase"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:62
+#: src/components/settings/Settings.tsx:92
 msgid "Passphrase Settings"
 msgstr ""
 
@@ -1334,11 +1334,11 @@ msgstr "Encabezado Hash anterior"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "Llave privada con huella digital pública {fingerprint}"
 
-#: src/middleware/middleware_api.jsx:253
+#: src/middleware/middleware_api.jsx:262
 msgid "Private key {0}"
 msgstr "Llave privada {0}"
 
-#: src/middleware/middleware_api.jsx:263
+#: src/middleware/middleware_api.jsx:272
 msgid "Private key:"
 msgstr "Llave privada:"
 
@@ -1354,7 +1354,7 @@ msgstr "Pruebas Encontradas"
 msgid "Pubkey"
 msgstr "Llave Pública"
 
-#: src/middleware/middleware_api.jsx:271
+#: src/middleware/middleware_api.jsx:280
 msgid "Public key:"
 msgstr "Llave pública:"
 
@@ -1407,7 +1407,7 @@ msgstr "Configuración de Cartera de Usuario con Tarifa Limitada"
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:100
+#: src/components/settings/Settings.tsx:130
 msgid "Re-enter Old Passphrase"
 msgstr ""
 
@@ -1478,7 +1478,7 @@ msgstr "Ubicación de carpeta temporal secundaria"
 msgid "See private key"
 msgstr "Ver llave privada"
 
-#: src/middleware/middleware_api.jsx:281
+#: src/middleware/middleware_api.jsx:290
 msgid "Seed:"
 msgstr "Semilla:"
 
@@ -1541,7 +1541,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Enviar su llave pública a su administrador de Cartera de Tarifa Limitada:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:120
+#: src/components/settings/Settings.tsx:150
 msgid "Settings"
 msgstr ""
 

@@ -974,7 +974,7 @@ msgstr "新位址"
 #~ msgid "New Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:107
+#: src/components/settings/Settings.tsx:137
 msgid "New Passphrase"
 msgstr ""
 
@@ -997,7 +997,7 @@ msgstr "暱稱"
 msgid "No"
 msgstr "否"
 
-#: src/middleware/middleware_api.jsx:289
+#: src/middleware/middleware_api.jsx:298
 msgid "No 24 word seed, since this key is imported."
 msgstr "由這個鑰匙是匯入的，沒有 24 個字種子。"
 
@@ -1076,7 +1076,7 @@ msgstr "已建立提案"
 #~ msgid "Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:95
+#: src/components/settings/Settings.tsx:125
 msgid "Old Passphrase"
 msgstr ""
 
@@ -1093,11 +1093,11 @@ msgstr "匯出"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:74
+#: src/components/settings/Settings.tsx:104
 msgid "Passphrase"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:62
+#: src/components/settings/Settings.tsx:92
 msgid "Passphrase Settings"
 msgstr ""
 
@@ -1334,11 +1334,11 @@ msgstr "前一個表頭雜湊值"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "帶有公有指紋 {fingerprint} 的私鑰"
 
-#: src/middleware/middleware_api.jsx:253
+#: src/middleware/middleware_api.jsx:262
 msgid "Private key {0}"
 msgstr "私鑰 {0}"
 
-#: src/middleware/middleware_api.jsx:263
+#: src/middleware/middleware_api.jsx:272
 msgid "Private key:"
 msgstr "私鑰："
 
@@ -1354,7 +1354,7 @@ msgstr "發現證明數"
 msgid "Pubkey"
 msgstr "公鑰"
 
-#: src/middleware/middleware_api.jsx:271
+#: src/middleware/middleware_api.jsx:280
 msgid "Public key:"
 msgstr "公鑰："
 
@@ -1407,7 +1407,7 @@ msgstr "速率限制使用者錢包設定"
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:100
+#: src/components/settings/Settings.tsx:130
 msgid "Re-enter Old Passphrase"
 msgstr ""
 
@@ -1478,7 +1478,7 @@ msgstr "第二暫存資料夾位置"
 msgid "See private key"
 msgstr "看私鑰"
 
-#: src/middleware/middleware_api.jsx:281
+#: src/middleware/middleware_api.jsx:290
 msgid "Seed:"
 msgstr "種子："
 
@@ -1541,7 +1541,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "發送你的公鑰到你的速率限制錢包管理員："
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:120
+#: src/components/settings/Settings.tsx:150
 msgid "Settings"
 msgstr ""
 

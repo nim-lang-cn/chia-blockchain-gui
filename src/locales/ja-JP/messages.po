@@ -974,7 +974,7 @@ msgstr "新規アドレス"
 #~ msgid "New Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:107
+#: src/components/settings/Settings.tsx:137
 msgid "New Passphrase"
 msgstr ""
 
@@ -997,7 +997,7 @@ msgstr "ニックネーム"
 msgid "No"
 msgstr "いいえ"
 
-#: src/middleware/middleware_api.jsx:289
+#: src/middleware/middleware_api.jsx:298
 msgid "No 24 word seed, since this key is imported."
 msgstr "この鍵はインポートされているため、24語の種がありません。"
 
@@ -1076,7 +1076,7 @@ msgstr "作成した注文"
 #~ msgid "Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:95
+#: src/components/settings/Settings.tsx:125
 msgid "Old Passphrase"
 msgstr ""
 
@@ -1093,11 +1093,11 @@ msgstr "出金"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:74
+#: src/components/settings/Settings.tsx:104
 msgid "Passphrase"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:62
+#: src/components/settings/Settings.tsx:92
 msgid "Passphrase Settings"
 msgstr ""
 
@@ -1334,11 +1334,11 @@ msgstr "前ヘッダーハッシュ値"
 msgid "Private key with public fingerprint {fingerprint}"
 msgstr "公開指紋 {fingerprint} に対応する秘密鍵"
 
-#: src/middleware/middleware_api.jsx:253
+#: src/middleware/middleware_api.jsx:262
 msgid "Private key {0}"
 msgstr "秘密鍵 {0}"
 
-#: src/middleware/middleware_api.jsx:263
+#: src/middleware/middleware_api.jsx:272
 msgid "Private key:"
 msgstr "秘密鍵:"
 
@@ -1354,7 +1354,7 @@ msgstr "発見証明数"
 msgid "Pubkey"
 msgstr "公開鍵"
 
-#: src/middleware/middleware_api.jsx:271
+#: src/middleware/middleware_api.jsx:280
 msgid "Public key:"
 msgstr "公開鍵:"
 
@@ -1407,7 +1407,7 @@ msgstr "レート制限付きユーザーウォレットのセットアップ"
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:100
+#: src/components/settings/Settings.tsx:130
 msgid "Re-enter Old Passphrase"
 msgstr ""
 
@@ -1478,7 +1478,7 @@ msgstr "2つ目の一時フォルダの場所"
 msgid "See private key"
 msgstr "秘密鍵を表示"
 
-#: src/middleware/middleware_api.jsx:281
+#: src/middleware/middleware_api.jsx:290
 msgid "Seed:"
 msgstr "乱数種:"
 
@@ -1541,7 +1541,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "レート制限付きウォレットの管理者にあなたの公開鍵を送ってください:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:120
+#: src/components/settings/Settings.tsx:150
 msgid "Settings"
 msgstr ""
 

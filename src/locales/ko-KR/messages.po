@@ -974,7 +974,7 @@ msgstr "새 주소"
 #~ msgid "New Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:137
+#: src/components/settings/Settings.tsx:103
 msgid "New Passphrase"
 msgstr ""
 
@@ -1076,7 +1076,7 @@ msgstr "제안이 생성되었습니다"
 #~ msgid "Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:125
+#: src/components/settings/Settings.tsx:97
 msgid "Old Passphrase"
 msgstr ""
 
@@ -1093,11 +1093,11 @@ msgstr "내보내는 중"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:104
+#: src/components/settings/Settings.tsx:164
 msgid "Passphrase"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:92
+#: src/components/settings/Settings.tsx:143
 msgid "Passphrase Settings"
 msgstr ""
 
@@ -1407,7 +1407,7 @@ msgstr "비율 제한 사용자 지갑 설정"
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:130
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passphrase"
 msgstr ""
 
@@ -1541,7 +1541,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "이 정보 패킷을 비율 제한 지갑 사용자에게 보냅니다. 이 사용자는 이를 사용하여 지갑 설정을 완료해야합니다."
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:150
+#: src/components/settings/Settings.tsx:184
 msgid "Settings"
 msgstr ""
 
@@ -2074,11 +2074,11 @@ msgstr "내 풀 노드 연결"
 msgid "Your Harvester Network"
 msgstr "내 수확기 네트워크"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:131
 msgid "Your inputs for old passphrase do not match"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:86
+#: src/components/settings/Settings.tsx:137
 msgid "Your new passphrase must be at least 8 characters"
 msgstr ""
 

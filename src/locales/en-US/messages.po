@@ -974,7 +974,7 @@ msgstr "New Address"
 #~ msgid "New Passcode"
 #~ msgstr "New Passcode"
 
-#: src/components/settings/Settings.tsx:137
+#: src/components/settings/Settings.tsx:103
 msgid "New Passphrase"
 msgstr "New Passphrase"
 
@@ -1076,7 +1076,7 @@ msgstr "Offers Created"
 #~ msgid "Old Passcode"
 #~ msgstr "Old Passcode"
 
-#: src/components/settings/Settings.tsx:125
+#: src/components/settings/Settings.tsx:97
 msgid "Old Passphrase"
 msgstr "Old Passphrase"
 
@@ -1093,11 +1093,11 @@ msgstr "Outgoing"
 #~ msgstr "Passcode Settings"
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:104
+#: src/components/settings/Settings.tsx:164
 msgid "Passphrase"
 msgstr "Passphrase"
 
-#: src/components/settings/Settings.tsx:92
+#: src/components/settings/Settings.tsx:143
 msgid "Passphrase Settings"
 msgstr "Passphrase Settings"
 
@@ -1407,7 +1407,7 @@ msgstr "Rate Limited User Wallet Setup"
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr "Re-enter Old Passcode"
 
-#: src/components/settings/Settings.tsx:130
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passphrase"
 msgstr "Re-enter Old Passphrase"
 
@@ -1541,7 +1541,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Send your pubkey to your Rate Limited Wallet admin:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:150
+#: src/components/settings/Settings.tsx:184
 msgid "Settings"
 msgstr "Settings"
 
@@ -2074,11 +2074,11 @@ msgstr "Your Full Node Connection"
 msgid "Your Harvester Network"
 msgstr "Your Harvester Network"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:131
 msgid "Your inputs for old passphrase do not match"
 msgstr "Your inputs for old passphrase do not match"
 
-#: src/components/settings/Settings.tsx:86
+#: src/components/settings/Settings.tsx:137
 msgid "Your new passphrase must be at least 8 characters"
 msgstr "Your new passphrase must be at least 8 characters"
 

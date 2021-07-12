@@ -980,7 +980,7 @@ msgstr "آدرس جدید"
 #~ msgid "New Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:137
+#: src/components/settings/Settings.tsx:103
 msgid "New Passphrase"
 msgstr ""
 
@@ -1082,7 +1082,7 @@ msgstr "پیشنهادات ایجاد شده"
 #~ msgid "Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:125
+#: src/components/settings/Settings.tsx:97
 msgid "Old Passphrase"
 msgstr ""
 
@@ -1101,11 +1101,11 @@ msgstr "در حال خروج"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:104
+#: src/components/settings/Settings.tsx:164
 msgid "Passphrase"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:92
+#: src/components/settings/Settings.tsx:143
 msgid "Passphrase Settings"
 msgstr ""
 
@@ -1415,7 +1415,7 @@ msgstr "پیکره بندی کیف پولِ با نرخ(سرعت) محدود"
 #~ msgid "Re-enter Old Passcode"
 #~ msgstr ""
 
-#: src/components/settings/Settings.tsx:130
+#: src/components/settings/Settings.tsx:100
 msgid "Re-enter Old Passphrase"
 msgstr ""
 
@@ -1549,7 +1549,7 @@ msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "کلید عمومی خود را به مدیر کیف پولِ نرخ محدود خود ارسال کنید:"
 
 #: src/components/dashboard/DashboardSideBar.tsx:28
-#: src/components/settings/Settings.tsx:150
+#: src/components/settings/Settings.tsx:184
 msgid "Settings"
 msgstr ""
 
@@ -2090,11 +2090,11 @@ msgstr "اتصالات گره کامل شما"
 msgid "Your Harvester Network"
 msgstr "شبکه برداشت کننده های شما"
 
-#: src/components/settings/Settings.tsx:80
+#: src/components/settings/Settings.tsx:131
 msgid "Your inputs for old passphrase do not match"
 msgstr ""
 
-#: src/components/settings/Settings.tsx:86
+#: src/components/settings/Settings.tsx:137
 msgid "Your new passphrase must be at least 8 characters"
 msgstr ""
 

@@ -2246,6 +2246,14 @@ msgstr "Ваше подключение к полному узлу"
 msgid "Your Harvester Network"
 msgstr "Ваша сеть комбайнов"
 
+#: src/components/settings/Settings.tsx:80
+msgid "Your inputs for old passphrase do not match"
+msgstr ""
+
+#: src/components/settings/Settings.tsx:86
+msgid "Your new passphrase must be at least 8 characters"
+msgstr ""
+
 #: src/util/getDescriptiveError.ts:4
 msgid "[Error 13] Permission denied. You are trying to access a file/directory without having the necessary permissions. Most likely one of the plot folders in your config.yaml has an issue."
 msgstr "[Ошибка 13] Доступ запрещен. Вы пытаетесь получить доступ к файлу/каталогу без необходимых разрешений. Скорее всего, одна из папок участков в вашем config.yaml имеет проблему."

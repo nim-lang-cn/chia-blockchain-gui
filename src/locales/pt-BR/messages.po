@@ -2074,6 +2074,14 @@ msgstr "Sua conexão de nó completo"
 msgid "Your Harvester Network"
 msgstr "Sua Rede de Coletores"
 
+#: src/components/settings/Settings.tsx:80
+msgid "Your inputs for old passphrase do not match"
+msgstr ""
+
+#: src/components/settings/Settings.tsx:86
+msgid "Your new passphrase must be at least 8 characters"
+msgstr ""
+
 #: src/util/getDescriptiveError.ts:4
 msgid "[Error 13] Permission denied. You are trying to access a file/directory without having the necessary permissions. Most likely one of the plot folders in your config.yaml has an issue."
 msgstr "[Erro 13] Permissão negada. Você está tentando acessar um arquivo / diretório sem ter as permissões necessárias. Provavelmente, uma das pastas do loteamento no seu config.yaml está com problemas."

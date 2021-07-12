@@ -2074,6 +2074,14 @@ msgstr "Η Πλήρης Σύνδεση Κόμβου Σας"
 msgid "Your Harvester Network"
 msgstr "Το Δικό σας Δίκτυο Harvester"
 
+#: src/components/settings/Settings.tsx:80
+msgid "Your inputs for old passphrase do not match"
+msgstr ""
+
+#: src/components/settings/Settings.tsx:86
+msgid "Your new passphrase must be at least 8 characters"
+msgstr ""
+
 #: src/util/getDescriptiveError.ts:4
 msgid "[Error 13] Permission denied. You are trying to access a file/directory without having the necessary permissions. Most likely one of the plot folders in your config.yaml has an issue."
 msgstr "[Σφάλμα 13] Άρνηση άδειας. Προσπαθείτε να αποκτήσετε πρόσβαση σε ένα αρχείο/κατάλογο χωρίς να έχετε τα απαραίτητα δικαιώματα. Πιθανότατα ένας από τους φακέλους σχεδίασης στο config.yaml έχει πρόβλημα."

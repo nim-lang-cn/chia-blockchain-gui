@@ -2074,6 +2074,14 @@ msgstr "你的完整節點連線"
 msgid "Your Harvester Network"
 msgstr "你的收割機網路"
 
+#: src/components/settings/Settings.tsx:80
+msgid "Your inputs for old passphrase do not match"
+msgstr ""
+
+#: src/components/settings/Settings.tsx:86
+msgid "Your new passphrase must be at least 8 characters"
+msgstr ""
+
 #: src/util/getDescriptiveError.ts:4
 msgid "[Error 13] Permission denied. You are trying to access a file/directory without having the necessary permissions. Most likely one of the plot folders in your config.yaml has an issue."
 msgstr "［錯誤 13］權限被拒。你想存取一個檔案／目錄但沒有所需的權限。很有可能你 config.yaml 裡其中一個耕地資料夾有問題。"

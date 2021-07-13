@@ -1101,7 +1101,7 @@ msgstr "در حال خروج"
 #~ msgstr ""
 
 #: src/components/app/AppPassLogin.tsx:34
-#: src/components/settings/Settings.tsx:164
+#: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
 

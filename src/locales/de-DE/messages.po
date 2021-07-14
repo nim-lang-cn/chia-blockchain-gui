@@ -1098,7 +1098,7 @@ msgstr "Ausgehend"
 #~ msgid "Passcode Settings"
 #~ msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
@@ -1155,7 +1155,7 @@ msgstr "Bitte füge ein Handelspaar hinzu"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Bitte Gebühr von 0 eintragen. Positive Gebühren werden derzeit nicht im RL unterstützt."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr ""
 

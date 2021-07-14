@@ -1092,7 +1092,7 @@ msgstr "내보내는 중"
 #~ msgid "Passcode Settings"
 #~ msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
@@ -1149,7 +1149,7 @@ msgstr "거래 페어를 추가하십시오"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "수수료 0을 입력하세요. RL에는 아직 양수 수수료가 지원되지 않습니다."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr ""
 

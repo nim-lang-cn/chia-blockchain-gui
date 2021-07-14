@@ -1092,7 +1092,7 @@ msgstr "Outgoing"
 #~ msgid "Passcode Settings"
 #~ msgstr "Passcode Settings"
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr "Passphrase"
@@ -1149,7 +1149,7 @@ msgstr "Please add a trade pair"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Please enter 0 fee. Positive fees not supported yet for RL."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr "Please enter a passphrase"
 

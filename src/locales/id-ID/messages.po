@@ -1092,7 +1092,7 @@ msgstr "Keluar"
 #~ msgid "Passcode Settings"
 #~ msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
@@ -1149,7 +1149,7 @@ msgstr "Sila masukkan pasangan perdagangan"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Silahkan memasukkan 0 untuk biaya. Biaya tambahan belum didukung sementara ini untuk RL."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr ""
 

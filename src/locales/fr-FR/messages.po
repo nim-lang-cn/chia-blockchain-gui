@@ -1092,7 +1092,7 @@ msgstr "Sortant"
 #~ msgid "Passcode Settings"
 #~ msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
@@ -1149,7 +1149,7 @@ msgstr "Veuillez compléter les informations d'échange"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Veuillez entrer 0 taxe. Les taxes positives ne sont pas encore supportées pour les portes-monnaies à vitesse limitée."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr ""
 

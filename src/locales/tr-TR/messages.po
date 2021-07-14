@@ -1092,7 +1092,7 @@ msgstr "Giden"
 #~ msgid "Passcode Settings"
 #~ msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
@@ -1149,7 +1149,7 @@ msgstr "Lütfen alım/satım çifti ekleyin"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Lütfen komisyonu 0 giriniz. Komisyonlara pozitif sayı girilmesi henüz RL için desteklenmiyor."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr ""
 

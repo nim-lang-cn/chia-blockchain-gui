@@ -1092,7 +1092,7 @@ msgstr "Изходящи"
 #~ msgid "Passcode Settings"
 #~ msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
@@ -1149,7 +1149,7 @@ msgstr ""
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Моля, въведете 0 такса. Все още не се поддържат положителни такси за RL."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr ""
 

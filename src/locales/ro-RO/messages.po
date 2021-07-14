@@ -1092,7 +1092,7 @@ msgstr "Expedieri"
 #~ msgid "Passcode Settings"
 #~ msgstr ""
 
-#: src/components/app/AppPassLogin.tsx:34
+#: src/components/app/AppPassLogin.tsx:38
 #: src/components/settings/Settings.tsx:165
 msgid "Passphrase"
 msgstr ""
@@ -1149,7 +1149,7 @@ msgstr "Te rog adaugă o pereche de schimb"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Te rog folosește comision 0. Comisioanele nu sunt suportate în acest moment pentru TL."
 
-#: src/components/app/AppPassLogin.tsx:22
+#: src/components/app/AppPassLogin.tsx:26
 msgid "Please enter a passphrase"
 msgstr ""
 

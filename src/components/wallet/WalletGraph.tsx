@@ -13,6 +13,7 @@ import { mojo_to_chia } from '../../util/chia';
 import usePeak from '../../hooks/usePeak';
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import blockHeightToTimestamp from '../../util/blockHeightToTimestamp';
+import moment from 'moment';
 
 /*
 const HOUR_SECONDS = 60 * 60;
@@ -258,12 +259,12 @@ export default function WalletGraph(props: Props) {
         yScale={{
           type: 'linear',
           stacked: true,
-          min: 0,
+            min: 0,
           max,
         }}
         tooltip={({ point }) => (
           <StyledTooltip>
-            {point?.data?.tooltip} {currencyCode}
+            {moment(parseInt(point?.data?.x*1000)).format("YYYY-MM-DD HH:mm:ss")} {point?.data?.tooltip} {currencyCode}
           </StyledTooltip>
         )}
         xScale={{

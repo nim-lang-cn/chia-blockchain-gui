@@ -191,7 +191,7 @@ export default function Wallets() {
             <StyledList disablePadding>
               {visibleWallets.map((wallet) => (
                 <span key={wallet.id}>
-                  <WalletItem wallet_id={wallet.id} key={wallet.id} />
+                  <WalletItem wallet_id={wallet.id} key={} />
                   <Divider />
                 </span>
               ))}

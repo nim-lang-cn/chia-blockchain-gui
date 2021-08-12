@@ -2,6 +2,7 @@ import React, { ReactNode, cloneElement } from 'react';
 import styled from 'styled-components';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import log from 'electron-log';
 
 const StyledListItem = styled(ListItem)`
   display: flex;
@@ -35,7 +36,6 @@ export default function SideBarItem(props: Props) {
   const match = useRouteMatch(to);
 
   const isSelected = exact ? !!match && match.isExact : !!match;
-
   async function handleClick() {
     if (onSelect) {
       await onSelect();

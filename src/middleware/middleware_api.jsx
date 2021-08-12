@@ -129,35 +129,47 @@ async function get_height(store) {
   }
 }
 
-async function get_wallet_transactions(store, id) {
-  if (
-    can_call_get_wallet_transactions[id] === true ||
-    !(id in can_call_get_wallet_transactions)
-  ) {
-    can_call_get_wallet_transactions[id] = false;
-    store.dispatch(get_transactions(id));
-    can_call_get_wallet_transactions[id] = false;
-    timeout_balance = setTimeout(() => {
-      store.dispatch(get_transactions(id));
-      can_call_get_wallet_transactions[id] = true;
-    }, 10000);
+async function get_wallet_transactions(store, name, id) {
+  if (!(name in can_call_get_wallet_transactions))
+  {
+    can_call_get_wallet_transactions[name] = { id: true };
+    store.dispatch(get_transactions(name, id));
+
   }
+  if (
+    can_call_get_wallet_transactions[name][id] === true 
+  ) {
+    can_call_get_wallet_transactions[name][id] = false;
+    store.dispatch(get_transactions(name, id));
+    
+  }
+  can_call_get_wallet_transactions[name][id] = false;
+    timeout_balance = setTimeout(() => {
+      store.dispatch(get_transactions(name,id));
+      can_call_get_wallet_transactions[name][id] = true;
+    }, 10000);
 }
 
-async function get_wallet_balance(store, id) {
-  if (
-    can_call_get_wallet_balance[id] === true ||
-    !(id in can_call_get_wallet_balance)
-  ) {
-    can_call_get_wallet_balance[id] = false;
-    store.dispatch(get_balance_for_wallet(id));
+async function get_wallet_balance(store, name, id) {
+  if (!(name in can_call_get_wallet_balance))
+  {
+    can_call_get_wallet_balance[name] = { id: true };
+    store.dispatch(get_balance_for_wallet(name, id));
     store.dispatch(get_farmed_amount());
-    timeout_balance = setTimeout(() => {
-      store.dispatch(get_balance_for_wallet(id));
-      store.dispatch(get_farmed_amount());
-      can_call_get_wallet_balance[id] = true;
-    }, 10000);
   }
+  if (
+    can_call_get_wallet_balance[name][id] === true
+  ) {
+    can_call_get_wallet_balance[name][id] = false;
+    store.dispatch(get_balance_for_wallet(name, id));
+    store.dispatch(get_farmed_amount());
+    
+  }
+  timeout_balance = setTimeout(() => {
+    store.dispatch(get_balance_for_wallet(name, id));
+    store.dispatch(get_farmed_amount());
+    can_call_get_wallet_balance[name][id] = true;
+  }, 10000);
 }
 
 export function refreshAllState() {
@@ -318,16 +330,16 @@ export const handle_message = async (store, payload, errorProcessed) => {
           const data = JSON.parse(wallet.data);
           wallet.data = data;
           if (data.initialized === true) {
-            get_wallet_balance(store, wallet.id);
+            get_wallet_balance(store,wallet.name, wallet.id);
           } else {
             console.log('RL wallet has not been initalized yet');
           }
         } else {
-          get_wallet_balance(store, wallet.id);
+          get_wallet_balance(store, wallet.name, wallet.id);
         }
-        get_wallet_transactions(store, wallet.id);
+        get_wallet_transactions(store, wallet.name, wallet.id);
         if (wallet.type === COLOURED_COIN || wallet.type === STANDARD_WALLET) {
-          store.dispatch(get_address(wallet.id, false));
+          store.dispatch(get_address(wallet.name, wallet.id, false));
         }
         if (wallet.type === COLOURED_COIN) {
           store.dispatch(get_colour_name(wallet.id));
@@ -358,8 +370,8 @@ export const handle_message = async (store, payload, errorProcessed) => {
       }
     } else if (state === 'coin_added' || state === 'coin_removed') {
       var { wallet_id } = payload.data;
-      get_wallet_balance(store, wallet_id);
-      get_wallet_transactions(store, wallet_id);
+      get_wallet_balance(store, wallet.name, wallet_id);
+      get_wallet_transactions(store, wallet.name, wallet_id);
     } else if (state === 'sync_changed') {
       store.dispatch(get_sync_status());
     } else if (state === 'new_block') {
@@ -369,8 +381,8 @@ export const handle_message = async (store, payload, errorProcessed) => {
       store.dispatch(getBlockChainState());
     } else if (state === 'pending_transaction') {
       wallet_id = payload.data.wallet_id;
-      get_wallet_balance(store, wallet_id);
-      get_wallet_transactions(store, wallet_id);
+      get_wallet_balance(store, wallet.name, wallet_id);
+      get_wallet_transactions(store,wallet.name, wallet_id);
     }
   } else if (payload.command === 'cc_set_name') {
     if (payload.data.success) {

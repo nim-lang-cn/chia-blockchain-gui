@@ -321,6 +321,10 @@ msgstr "奇亚区块链项目维基"
 msgid "Chia Wallet"
 msgstr "奇亚钱包"
 
+#: src/components/dashboard/DashboardSideBar.tsx:45
+msgid "Chia Wallets"
+msgstr ""
+
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
 msgstr "选择要开垦的数量"
@@ -744,7 +748,7 @@ msgstr "不耕种最终输出文件夹"
 msgid "Failed to open (invalid plots)"
 msgstr "打开失败（农田无效）"
 
-#: src/components/dashboard/DashboardSideBar.tsx:55
+#: src/components/dashboard/DashboardSideBar.tsx:71
 #: src/components/wallet/coloured/WalletColoured.tsx:610
 #: src/components/wallet/standard/WalletStandard.tsx:532
 msgid "Farm"
@@ -861,6 +865,10 @@ msgstr "最终输出文件夹位置"
 msgid "Finished"
 msgstr "已完成"
 
+#: src/components/dashboard/DashboardSideBar.tsx:52
+msgid "Flax Wallets"
+msgstr ""
+
 #: src/electron/main.tsx:407
 msgid "Follow on Twitter"
 msgstr "关注我们的Twitter"
@@ -893,6 +901,10 @@ msgstr "生成新的色彩"
 #: src/components/plotNFT/PlotNFTCard.tsx:251
 #~ msgid "Get Pool Login Link"
 #~ msgstr "Get Pool Login Link"
+
+#: src/components/dashboard/DashboardSideBar.tsx:59
+msgid "Goji Wallets"
+msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:176
 msgid "Grid view"
@@ -1041,7 +1053,7 @@ msgstr "加入农业合作社来获得持续的XCH耕种收益。创建一个农
 msgid "K-Size"
 msgstr "K值大小"
 
-#: src/components/dashboard/DashboardSideBar.tsx:66
+#: src/components/dashboard/DashboardSideBar.tsx:82
 msgid "Keys"
 msgstr "密钥"
 
@@ -1482,7 +1494,7 @@ msgstr "农田与 {0} 重复"
 msgid "PlotNFT is transitioning to (target state). This can take a while. Please do not close the application until this is finalized."
 msgstr "农田NFT正在过渡到（目标状态）。这可能需要一段时间。请在完成之前不要关闭应用程序。"
 
-#: src/components/dashboard/DashboardSideBar.tsx:50
+#: src/components/dashboard/DashboardSideBar.tsx:66
 msgid "Plots"
 msgstr "农田"
 
@@ -1525,7 +1537,7 @@ msgstr "最近24小时获取的积点"
 msgid "Points Successful in Last 24 Hours"
 msgstr "最近24小时成功获取的积点"
 
-#: src/components/dashboard/DashboardSideBar.tsx:60
+#: src/components/dashboard/DashboardSideBar.tsx:76
 #: src/components/pool/Pool.tsx:25
 msgid "Pool"
 msgstr "农业合作社"
@@ -2409,7 +2421,6 @@ msgstr "钱包状态："
 #~ msgid "WalletStatusCard.syncing"
 #~ msgstr ""
 
-#: src/components/dashboard/DashboardSideBar.tsx:45
 #: src/components/wallet/Wallets.tsx:173
 msgid "Wallets"
 msgstr "钱包"

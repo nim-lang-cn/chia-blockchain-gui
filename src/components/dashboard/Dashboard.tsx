@@ -87,7 +87,13 @@ export default function Dashboard() {
           <Route path={`${path}/block/:headerHash`} exact>
             <Block />
           </Route>
-          <Route path={`${path}/wallets`}>
+          <Route path={`${path}/wallets/chia`}>
+            <Wallets />
+          </Route>
+          <Route path={`${path}/wallets/flax`}>
+            <Wallets />
+          </Route>
+          <Route path={`${path}/wallets/goji`}>
             <Wallets />
           </Route>
           <Route path={`${path}/plot`}>

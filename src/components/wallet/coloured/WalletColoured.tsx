@@ -627,11 +627,13 @@ function SendCard(props: SendCardProps) {
 }
 
 type AddressCardProps = {
+  wallet_name: string;
   wallet_id: number;
 };
 
 function AddressCard(props: AddressCardProps) {
   const id = props.wallet_id;
+  const name = props.wallet_name;
   const address = useSelector(
     (state: RootState) => state.wallet_state.wallets[id].address,
   );
@@ -639,7 +641,7 @@ function AddressCard(props: AddressCardProps) {
   const dispatch = useDispatch();
 
   function newAddress() {
-    dispatch(get_address(id));
+    dispatch(get_address(name, id));
   }
 
   function copy() {

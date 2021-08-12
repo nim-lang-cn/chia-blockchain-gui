@@ -135,6 +135,7 @@ if (!handleSquirrelEvent()) {
         webPreferences: {
           preload: `${__dirname}/preload.js`,
           nodeIntegration: true,
+          contextIsolation: false,
           enableRemoteModule: true,
         },
       });
@@ -168,12 +169,13 @@ if (!handleSquirrelEvent()) {
         mainWindow.show();
       });
 
-      // don't show remote daeomn detials in the title bar
+      // don't show remote daemon details in the title bar
       if (!chiaConfig.manageDaemonLifetime()) {
         mainWindow.webContents.on('did-finish-load', () => {
           mainWindow.setTitle(`${app.getName()} [${global.daemon_rpc_ws}]`);
         });
       }
+      mainWindow.webContents.openDevTools();
       // Uncomment this to open devtools by default
       // if (!guessPackaged()) {
       //   mainWindow.webContents.openDevTools();

@@ -554,7 +554,7 @@ type AddressCardProps = {
 };
 
 function AddressCard(props: AddressCardProps) {
-  const { wallet_id } = props;
+  const { wallet_name, wallet_id } = props;
 
   const dispatch = useDispatch();
   const wallet = useSelector((state: RootState) =>
@@ -568,7 +568,7 @@ function AddressCard(props: AddressCardProps) {
   const { address } = wallet;
 
   function newAddress() {
-    dispatch(get_address(wallet_id, true));
+    dispatch(get_address(wallet_name, wallet_id, true));
   }
 
   return (
@@ -676,8 +676,6 @@ export default function StandardWallet(props: StandardWalletProps) {
           <WalletStatus height />
         </Flex>
         <Flex flexDirection="column" gap={3}>
-          <WalletCards wallet_id={wallet_id} />
-          <WalletCards wallet_id={wallet_id} />
           <WalletCards wallet_id={wallet_id} />
           <SendCard wallet_id={wallet_id} />
           <AddressCard wallet_id={wallet_id} />

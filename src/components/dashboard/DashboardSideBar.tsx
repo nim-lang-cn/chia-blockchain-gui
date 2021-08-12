@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { List } from '@material-ui/core';
 import {
   Wallet as WalletIcon,
@@ -13,6 +13,11 @@ import {
 } from '@chia/icons';
 import { Flex, SideBarItem } from '@chia/core';
 import { logOut } from '../../modules/message';
+import WalletType from 'constants/WalletType';
+import {
+  changeWalletMenu,
+  standardWallet
+} from '../../modules/walletMenu';
 
 const StyledRoot = styled(Flex)`
   height: 100%;
@@ -40,9 +45,25 @@ export default function DashboardSideBar() {
           exact
         />
         <SideBarItem
-          to="/dashboard/wallets"
+          to="/dashboard/wallets/chia"
           icon={<WalletIcon fontSize="large" />}
-          title={<Trans>Wallets</Trans>}
+          title={<Trans>Chia Wallets</Trans>}
+          exact
+          onSelect={()=>dispatch(changeWalletMenu(standardWallet,1))}
+        />
+         <SideBarItem
+          to="/dashboard/wallets/flax"
+          icon={<WalletIcon fontSize="large" />}
+          title={<Trans>Flax Wallets</Trans>}
+          exact
+          onSelect={()=>dispatch(changeWalletMenu(standardWallet,4))}
+        />
+         <SideBarItem
+          to="/dashboard/wallets/goji"
+          icon={<WalletIcon fontSize="large" />}
+          title={<Trans>Goji Wallets</Trans>}
+          exact
+          onSelect={()=>dispatch(changeWalletMenu(standardWallet,5))}
         />
         <SideBarItem
           to="/dashboard/plot"

@@ -321,6 +321,10 @@ msgstr "Chia Blockchain Wiki"
 msgid "Chia Wallet"
 msgstr "Chia Wallet"
 
+#: src/components/dashboard/DashboardSideBar.tsx:45
+msgid "Chia Wallets"
+msgstr "Chia Wallets"
+
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
 msgstr "Choose Number of Plots"
@@ -744,7 +748,7 @@ msgstr "Exclude final directory"
 msgid "Failed to open (invalid plots)"
 msgstr "Failed to open (invalid plots)"
 
-#: src/components/dashboard/DashboardSideBar.tsx:55
+#: src/components/dashboard/DashboardSideBar.tsx:71
 #: src/components/wallet/coloured/WalletColoured.tsx:610
 #: src/components/wallet/standard/WalletStandard.tsx:532
 msgid "Farm"
@@ -861,6 +865,10 @@ msgstr "Final folder location"
 msgid "Finished"
 msgstr "Finished"
 
+#: src/components/dashboard/DashboardSideBar.tsx:52
+msgid "Flax Wallets"
+msgstr "Flax Wallets"
+
 #: src/electron/main.tsx:407
 msgid "Follow on Twitter"
 msgstr "Follow on Twitter"
@@ -893,6 +901,10 @@ msgstr "Generate New Color"
 #: src/components/plotNFT/PlotNFTCard.tsx:251
 #~ msgid "Get Pool Login Link"
 #~ msgstr "Get Pool Login Link"
+
+#: src/components/dashboard/DashboardSideBar.tsx:59
+msgid "Goji Wallets"
+msgstr "Goji Wallets"
 
 #: src/components/pool/PoolOverview.tsx:176
 msgid "Grid view"
@@ -1041,7 +1053,7 @@ msgstr "Join a pool and get more consistent XCH farming rewards. Create a plot N
 msgid "K-Size"
 msgstr "K-Size"
 
-#: src/components/dashboard/DashboardSideBar.tsx:66
+#: src/components/dashboard/DashboardSideBar.tsx:82
 msgid "Keys"
 msgstr "Keys"
 
@@ -1482,7 +1494,7 @@ msgstr "Plot is a duplicate of {0}"
 msgid "PlotNFT is transitioning to (target state). This can take a while. Please do not close the application until this is finalized."
 msgstr "PlotNFT is transitioning to (target state). This can take a while. Please do not close the application until this is finalized."
 
-#: src/components/dashboard/DashboardSideBar.tsx:50
+#: src/components/dashboard/DashboardSideBar.tsx:66
 msgid "Plots"
 msgstr "Plots"
 
@@ -1525,7 +1537,7 @@ msgstr "Points Found in Last 24 Hours"
 msgid "Points Successful in Last 24 Hours"
 msgstr "Points Successful in Last 24 Hours"
 
-#: src/components/dashboard/DashboardSideBar.tsx:60
+#: src/components/dashboard/DashboardSideBar.tsx:76
 #: src/components/pool/Pool.tsx:25
 msgid "Pool"
 msgstr "Pool"
@@ -2409,7 +2421,6 @@ msgstr "Wallet Status:"
 #~ msgid "WalletStatusCard.syncing"
 #~ msgstr ""
 
-#: src/components/dashboard/DashboardSideBar.tsx:45
 #: src/components/wallet/Wallets.tsx:173
 msgid "Wallets"
 msgstr "Wallets"

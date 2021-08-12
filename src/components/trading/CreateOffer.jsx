@@ -179,7 +179,7 @@ export default function CreateOffer() {
                 {!!wallets &&
                   wallets.map((wallet) => (
                     <MenuItem value={wallet.id} key={wallet.id}>
-                      {wallet.name}
+                      {wallet.id}
                     </MenuItem>
                   ))}
               </Select>

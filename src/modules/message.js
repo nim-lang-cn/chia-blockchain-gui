@@ -159,10 +159,11 @@ export const pingWallet = () => {
   return action;
 };
 
-export const get_balance_for_wallet = (id) => {
+export const get_balance_for_wallet = (name,id) => {
   const action = walletMessage();
   action.message.command = 'get_wallet_balance';
-  action.message.data = { wallet_id: id };
+  action.message.data = { wallet_name:name, wallet_id: id };
+  console.log(action);
   return action;
 };
 
@@ -453,17 +454,17 @@ export const get_private_key = (fingerprint) => {
   return action;
 };
 
-export const get_transactions = (wallet_id) => {
+export const get_transactions = (wallet_name,wallet_id) => {
   const action = walletMessage();
   action.message.command = 'get_transactions';
-  action.message.data = { wallet_id };
+  action.message.data = { wallet_name,wallet_id };
   return action;
 };
 
-export const get_address = (wallet_id, new_address) => {
+export const get_address = (wallet_name, wallet_id, new_address) => {
   const action = walletMessage();
   action.message.command = 'get_next_address';
-  action.message.data = { wallet_id, new_address };
+  action.message.data = {wallet_name, wallet_id, new_address };
   return action;
 };
 

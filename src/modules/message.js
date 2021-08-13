@@ -100,7 +100,7 @@ export function getTransactionMessage(transactionId) {
 
 export function pwStatusMessage(walletName,walletId) {
   return format_message('pw_status', {
-    wallet_name: walletName
+    wallet_name: walletName,
     wallet_id: walletId,
   });
 }

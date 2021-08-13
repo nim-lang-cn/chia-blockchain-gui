@@ -695,10 +695,12 @@ function AddressCard(props: AddressCardProps) {
 
 type ColouredWalletProps = {
   wallet_id: number;
+  wallet_name: string;
 };
 
 export default function ColouredWallet(props: ColouredWalletProps) {
   const id = useSelector((state: RootState) => state.wallet_menu.id);
+  const name = useSelector((state: RootState) => state.wallet_menu.name);
   const wallets = useSelector(
     (state: RootState) => state.wallet_state.wallets ?? [],
   );
@@ -709,7 +711,7 @@ export default function ColouredWallet(props: ColouredWalletProps) {
         <ColourCard wallet_id={id} />
         <BalanceCard wallet_id={id} />
         <SendCard wallet_id={id} />
-        <AddressCard wallet_id={id} />
+        <AddressCard wallet_id={id} wallet_name={name}/>
         <WalletHistory walletId={id} />
       </Flex>
     );

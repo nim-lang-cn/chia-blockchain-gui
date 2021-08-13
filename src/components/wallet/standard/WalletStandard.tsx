@@ -550,6 +550,7 @@ function SendCard(props: SendCardProps) {
 }
 
 type AddressCardProps = {
+  wallet_name: string;
   wallet_id: number;
 };
 
@@ -615,10 +616,11 @@ function AddressCard(props: AddressCardProps) {
 
 type StandardWalletProps = {
   wallet_id: number;
+  wallet_name: string;
 };
 
 export default function StandardWallet(props: StandardWalletProps) {
-  const { wallet_id } = props;
+  const { wallet_name, wallet_id } = props;
   const dispatch = useDispatch();
   const openDialog = useOpenDialog();
 
@@ -678,7 +680,7 @@ export default function StandardWallet(props: StandardWalletProps) {
         <Flex flexDirection="column" gap={3}>
           <WalletCards wallet_id={wallet_id} />
           <SendCard wallet_id={wallet_id} />
-          <AddressCard wallet_id={wallet_id} />
+          <AddressCard wallet_id={wallet_id} wallet_name={wallet_name}/>
           <WalletHistory walletId={wallet_id} />
         </Flex>
       </Flex>

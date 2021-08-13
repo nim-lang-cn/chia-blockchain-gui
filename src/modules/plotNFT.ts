@@ -36,7 +36,7 @@ export function getPlotNFTs() {
           poolWallets.map((wallet) => dispatch(getPwStatus(wallet.id))),
         ),
         await Promise.all<WalletBalance>(
-          poolWallets.map((wallet) => dispatch(getWalletBalance(wallet.id))),
+          poolWallets.map((wallet) => dispatch(getWalletBalance(wallet.name,wallet.id))),
         ),
       ]);
 

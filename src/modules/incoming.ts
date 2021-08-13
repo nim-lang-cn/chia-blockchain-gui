@@ -56,11 +56,11 @@ export function getWallets() {
   };
 }
 
-export function getWalletBalance(walletId: number) {
+export function getWalletBalance(walletName: string, walletId: number) {
   return async (dispatch): Promise<WalletBalance> => {
     const { data } = await async_api(
       dispatch,
-      get_balance_for_wallet(walletId),
+      get_balance_for_wallet(walletName,walletId),
       false,
       true,
     );
@@ -265,8 +265,8 @@ export default function incomingReducer(
         const {
           wallet_balance,
           wallet_balance: {
-            wallet_id,
             wallet_name,
+            wallet_id,
             confirmed_wallet_balance,
             unconfirmed_wallet_balance,
           },

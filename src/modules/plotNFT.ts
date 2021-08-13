@@ -33,7 +33,7 @@ export function getPlotNFTs() {
 
       const [poolWalletStates, walletBalances] = await Promise.all([
         await Promise.all<PoolWalletStatus>(
-          poolWallets.map((wallet) => dispatch(getPwStatus(wallet.id))),
+          poolWallets.map((wallet) => dispatch(getPwStatus(wallet.name,wallet.id))),
         ),
         await Promise.all<WalletBalance>(
           poolWallets.map((wallet) => dispatch(getWalletBalance(wallet.name,wallet.id))),

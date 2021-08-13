@@ -27,11 +27,11 @@ export function getTransaction(transactionId: string) {
   };
 }
 
-export function getPwStatus(walletId: number) {
+export function getPwStatus(walletName:string, walletId: number) {
   return async (dispatch): Promise<PoolWalletStatus> => {
     const { data } = await async_api(
       dispatch,
-      pwStatusMessage(walletId),
+      pwStatusMessage(walletName,walletId),
       false,
       true,
     );

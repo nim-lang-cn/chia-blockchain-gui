@@ -45,7 +45,7 @@ export default function DashboardSideBar() {
           exact
         /> */}
         <SideBarItem
-          to="/dashboard"
+          to="/dashboard/"
           icon={<WalletIcon fontSize="large" />}
           title={<Trans>Chia Wallets</Trans>}
           exact

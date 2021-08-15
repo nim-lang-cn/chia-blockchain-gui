@@ -84,16 +84,16 @@ export default function Dashboard() {
           {/* <Route path={`${path}`} exact>
             <FullNode />
           </Route> */}
-          {/* <Route path={`${path}/block/:headerHash`} exact>
+          <Route path={`${path}/block/:headerHash`} exact>
             <Block />
-          </Route> */}
-          <Route path={`${path}`}>
+          </Route>
+          <Route path={`${path}`} exact>
             <FullNode />
           </Route>
-          <Route path={`${path}/wallets/flax`}>
+          <Route path={`${path}/wallets/flax`} exact>
             <FullNode />
           </Route>
-          <Route path={`${path}/wallets/goji`}>
+          <Route path={`${path}/wallets/goji`} exact>
             <FullNode />
           </Route>
           <Route path={`${path}/plot`}>

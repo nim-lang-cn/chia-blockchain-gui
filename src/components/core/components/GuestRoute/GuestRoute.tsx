@@ -11,7 +11,7 @@ export default function GuestRoute(props: Props) {
   );
 
   if (loggedIn) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/dashboard/" />;
   }
 
   return <Route {...props} />;

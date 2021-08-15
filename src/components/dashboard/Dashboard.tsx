@@ -81,20 +81,20 @@ export default function Dashboard() {
       <StyledBody flexDirection="column" flexGrow={1}>
         <ToolbarSpacing />
         <Switch>
-          <Route path={`${path}`} exact>
+          {/* <Route path={`${path}`} exact>
+            <FullNode />
+          </Route> */}
+          {/* <Route path={`${path}/block/:headerHash`} exact>
+            <Block />
+          </Route> */}
+          <Route path={`${path}`}>
             <FullNode />
           </Route>
-          <Route path={`${path}/block/:headerHash`} exact>
-            <Block />
-          </Route>
-          <Route path={`${path}/wallets/chia`}>
-            <Wallets />
-          </Route>
           <Route path={`${path}/wallets/flax`}>
-            <Wallets />
+            <FullNode />
           </Route>
           <Route path={`${path}/wallets/goji`}>
-            <Wallets />
+            <FullNode />
           </Route>
           <Route path={`${path}/plot`}>
             <Plot />

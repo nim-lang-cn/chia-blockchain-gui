@@ -21,6 +21,9 @@ import LayoutMain from '../layout/LayoutMain';
 import FullNodeBlockSearch from './FullNodeBlockSearch';
 import FullNodeCards from './card/FullNodeCards';
 
+
+
+
 /* global BigInt */
 
 const cols = [
@@ -319,6 +322,7 @@ const BlocksCard = () => {
 };
 
 export default function FullNode() {
+
   return (
     <LayoutMain title={<Trans>Full Node</Trans>}>
       <Flex gap={1}>
@@ -329,7 +333,7 @@ export default function FullNode() {
       <Flex flexDirection="column" gap={3}>
         <FullNodeCards />
         <BlocksCard />
-        <FullNodeConnections />
+        {/* <FullNodeConnections /> */}
       </Flex>
     </LayoutMain>
   );

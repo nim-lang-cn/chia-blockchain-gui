@@ -38,32 +38,32 @@ export default function DashboardSideBar() {
   return (
     <StyledRoot>
       <StyledList disablePadding>
-        <SideBarItem
+        {/* <SideBarItem
           to="/dashboard"
           icon={<HomeIcon fontSize="large" />}
           title={<Trans>Full Node</Trans>}
           exact
-        />
+        /> */}
         <SideBarItem
-          to="/dashboard/wallets/chia"
+          to="/dashboard"
           icon={<WalletIcon fontSize="large" />}
           title={<Trans>Chia Wallets</Trans>}
           exact
-          onSelect={()=>dispatch(changeWalletMenu(standardWallet,1))}
+          onSelect={()=>dispatch(changeWalletMenu(standardWallet,1,"Chia Wallet"))}
         />
          <SideBarItem
           to="/dashboard/wallets/flax"
           icon={<WalletIcon fontSize="large" />}
           title={<Trans>Flax Wallets</Trans>}
           exact
-          onSelect={()=>dispatch(changeWalletMenu(standardWallet,4))}
+          onSelect={()=>dispatch(changeWalletMenu(standardWallet,1,"flax"))}
         />
          <SideBarItem
           to="/dashboard/wallets/goji"
           icon={<WalletIcon fontSize="large" />}
           title={<Trans>Goji Wallets</Trans>}
           exact
-          onSelect={()=>dispatch(changeWalletMenu(standardWallet,5))}
+          onSelect={()=>dispatch(changeWalletMenu(standardWallet,1,"goji"))}
         />
         <SideBarItem
           to="/dashboard/plot"

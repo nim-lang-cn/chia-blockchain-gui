@@ -5,38 +5,38 @@ export const daemonMessage = () => ({
   },
 });
 
-export const registerService = (service) => {
+export const registerService = (service,wallet_name="chia") => {
   const action = daemonMessage();
   action.message.command = 'register_service';
-  action.message.data = { service };
+  action.message.data = { service,wallet_name };
   return action;
 };
 
-export const startService = (service) => {
+export const startService = (service,wallet_name="chia") => {
   const action = daemonMessage();
   action.message.command = 'start_service';
-  action.message.data = { service };
+  action.message.data = { service,wallet_name };
   return action;
 };
 
-export const startServiceTest = (service_name) => {
+export const startServiceTest = (service_name,wallet_name="chia") => {
   const action = daemonMessage();
   action.message.command = 'start_service';
-  action.message.data = { service: service_name, testing: true };
+  action.message.data = { service: service_name, testing: true ,wallet_name};
   return action;
 };
 
-export const stopService = (service_name) => {
+export const stopService = (service_name,wallet_name="chia") => {
   const action = daemonMessage();
   action.message.command = 'stop_service';
-  action.message.data = { service: service_name };
+  action.message.data = { service: service_name ,wallet_name};
   return action;
 };
 
-export const isServiceRunning = (service_name) => {
+export const isServiceRunning = (service_name,wallet_name="chia") => {
   const action = daemonMessage();
   action.message.command = 'is_running';
-  action.message.data = { service: service_name };
+  action.message.data = { service: service_name ,wallet_name};
   return action;
 };
 

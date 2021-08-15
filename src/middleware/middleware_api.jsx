@@ -71,13 +71,13 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function ping_wallet(store) {
-  store.dispatch(pingWallet());
+async function ping_wallet(store,wallet_name="chia") {
+  store.dispatch(pingWallet(wallet_name));
   await sleep(1000);
   const state = store.getState();
   const { wallet_connected } = state.daemon_state;
   if (!wallet_connected) {
-    ping_wallet(store);
+    ping_wallet(store,wallet_name);
   }
 }
 
@@ -174,29 +174,32 @@ async function get_wallet_balance(store, name, id) {
 
 export function refreshAllState() {
   return async (dispatch, getState) => {
-    dispatch(format_message('get_wallets', {}));
+    var chia = "chia"
+    var flax = "flax"
+    var goji = "goji"
+    dispatch(format_message('get_wallets', [chia,flax,goji]));
 
     if (config.local_test) {
-      dispatch(startServiceTest(service_wallet));
-      dispatch(startService(service_simulator));
+      dispatch(startServiceTest(service_wallet,chia));
+      dispatch(startService(service_simulator,chia));
     } else {
-      dispatch(startService(service_wallet));
-      dispatch(startService(service_full_node));
-      dispatch(startService(service_farmer));
-      dispatch(startService(service_harvester));
+      dispatch(startService(service_wallet,chia));
+      dispatch(startService(service_full_node,chia));
+      dispatch(startService(service_farmer,chia));
+      dispatch(startService(service_harvester,chia));
     }
 
-    dispatch(getNetworkInfo());
-    dispatch(get_height_info());
-    dispatch(get_sync_status());
-    dispatch(get_connection_info());
+    dispatch(getNetworkInfo(chia));
+    dispatch(get_height_info(chia));
+    dispatch(get_sync_status(chia));
+    dispatch(get_connection_info(chia));
 
-    dispatch(getFullNodeConnections());
-    dispatch(getLatestChallenges());
-    dispatch(getFarmerConnections());
-    dispatch(getHarvesters());
+    dispatch(getFullNodeConnections(chia));
+    dispatch(getLatestChallenges(chia));
+    dispatch(getFarmerConnections(chia));
+    dispatch(getHarvesters(chia));
     dispatch(getPlotDirectories());
-    dispatch(get_all_trades());
+    dispatch(get_all_trades(chia));
   };
 }
 
@@ -221,7 +224,7 @@ export const handle_message = async (store, payload, errorProcessed) => {
   } else if (payload.command === 'ping') {
     if (payload.origin === service_wallet) {
       store.dispatch(get_connection_info());
-      store.dispatch(format_message('get_public_keys', {}));
+      store.dispatch(format_message('get_public_keys', {"wallet_name":"chia"}));
     } else if (payload.origin === service_full_node) {
       store.dispatch(getBlockChainState());
       store.dispatch(getFullNodeConnections());
@@ -240,11 +243,11 @@ export const handle_message = async (store, payload, errorProcessed) => {
     }
   } else if (payload.command === 'delete_key') {
     if (payload.data.success) {
-      store.dispatch(format_message('get_public_keys', {}));
+      store.dispatch(format_message('get_public_keys', {"wallet_name":"chia"}));
     }
   } else if (payload.command === 'delete_all_keys') {
     if (payload.data.success) {
-      store.dispatch(format_message('get_public_keys', {}));
+      store.dispatch(format_message('get_public_keys', {"wallet_name":"chia"}));
     }
   } else if (payload.command === 'get_public_keys') {
     /*
@@ -401,10 +404,11 @@ export const handle_message = async (store, payload, errorProcessed) => {
       store.dispatch(offerParsed(payload.data.discrepancies));
     }
   } else if (payload.command === 'start_service') {
-    const { service } = payload.data;
+    const { service,wallet_name } = payload.data;
+    console.log("start_service:",payload.data);
     if (payload.data.success) {
       if (service === service_wallet) {
-        ping_wallet(store);
+        ping_wallet(store,wallet_name);
       } else if (
         service === service_full_node ||
         service === service_simulator
@@ -417,7 +421,7 @@ export const handle_message = async (store, payload, errorProcessed) => {
       }
     } else if (payload.data.error.includes('already running')) {
       if (service === service_wallet) {
-        ping_wallet(store);
+        ping_wallet(store,wallet_name);
       } else if (
         service === service_full_node ||
         service === service_simulator

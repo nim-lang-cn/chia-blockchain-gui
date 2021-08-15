@@ -155,6 +155,7 @@ export default function Wallets() {
   // const { path } = useRouteMatch();
   const wallets = useSelector((state: RootState) => state.wallet_state.wallets);
   const id = useSelector((state: RootState) => state.wallet_menu.id);
+  const name = useSelector((state: RootState) => state.wallet_menu.name);
   const wallet = wallets?.find((wallet) => wallet && wallet.id === id);
   /*
   const visibleWallets = useMemo(() => {
@@ -173,7 +174,7 @@ export default function Wallets() {
       title={<Trans>Wallets</Trans>}
     >
       {!!wallet && wallet.type === WalletType.STANDARD_WALLET && (
-        <StandardWallet wallet_id={id} />
+        <StandardWallet wallet_id={id} wallet_name={name}/>
       )}
     </LayoutMain>
   );

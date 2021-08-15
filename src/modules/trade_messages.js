@@ -22,10 +22,10 @@ export const cancel_trade_with_spend = (trade_id) => {
   return action;
 };
 
-export const get_all_trades = () => {
+export const get_all_trades = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'get_all_trades';
-  const data = {};
+  const data = {wallet_name};
   action.message.data = data;
   return action;
 };

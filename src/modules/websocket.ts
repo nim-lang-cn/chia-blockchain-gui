@@ -1,7 +1,7 @@
-export const wsConnect = (host: string) => ({ type: 'WS_CONNECT', host });
+export const wsConnect = (host: object) => ({ type: 'WS_CONNECT', host });
 export const wsConnecting = (host: string) => ({ type: 'WS_CONNECTING', host });
 export const wsConnected = (host: string) => ({ type: 'WS_CONNECTED', host });
-export const wsDisconnect = (host: string) => ({ type: 'WS_DISCONNECT', host });
+export const wsDisconnect = (host: object) => ({ type: 'WS_DISCONNECT', host });
 export const wsDisconnected = (host: string) => ({
   type: 'WS_DISCONNECTED',
   host,
@@ -10,7 +10,7 @@ export const wsDisconnected = (host: string) => ({
 type WebsocketState = {
   connected: boolean;
   connecting: boolean;
-  host?: string;
+  host?: object;
 };
 
 const initialState: WebsocketState = {

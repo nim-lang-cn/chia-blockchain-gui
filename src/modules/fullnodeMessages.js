@@ -9,7 +9,7 @@ export const fullNodeMessage = (message) => ({
   },
 });
 
-export function getBlockRecords(end, count = 10) {
+export function getBlockRecords(end, count = 10, wallet_name="chia") {
   return async (dispatch) => {
     let start = end - count;
     if (start < 0) {
@@ -25,6 +25,7 @@ export function getBlockRecords(end, count = 10) {
         data: {
           start,
           end,
+          wallet_name
         },
       }),
       false,
@@ -34,12 +35,13 @@ export function getBlockRecords(end, count = 10) {
   };
 }
 
-export function updateLatestBlocks() {
+export function updateLatestBlocks(wallet_name="chia") {
   return async (dispatch, getState) => {
     const state = getState();
     const height = state.full_node_state.blockchain_state?.peak?.height;
+    var count = 10;
     if (height) {
-      const blocks = await dispatch(getBlocksRecords(height));
+      const blocks = await dispatch(getBlocksRecords(height,count));
 
       dispatch({
         type: 'FULL_NODE_SET_LATEST_BLOCKS',
@@ -49,13 +51,12 @@ export function updateLatestBlocks() {
   };
 }
 
-export function getBlocksRecords(end, count = 10) {
+export function getBlocksRecords(end, count = 10, wallet_name="chia") {
   return async (dispatch) => {
     let start = end - count;
     if (start < 0) {
       start = 0;
     }
-
     const {
       data: { blocks },
     } = await async_api(
@@ -65,6 +66,7 @@ export function getBlocksRecords(end, count = 10) {
         data: {
           start,
           end: end + 1,
+          wallet_name
         },
       }),
       false,
@@ -74,9 +76,9 @@ export function getBlocksRecords(end, count = 10) {
   };
 }
 
-export function updateUnfinishedSubBlockHeaders() {
+export function updateUnfinishedSubBlockHeaders(wallet_name="chia") {
   return async (dispatch, getState) => {
-    const headers = await dispatch(getUnfinishedBlockHeaders());
+    const headers = await dispatch(getUnfinishedBlockHeaders(wallet_name));
 
     dispatch({
       type: 'FULL_NODE_SET_UNFINISHED_BLOCK_HEADERS',
@@ -85,7 +87,7 @@ export function updateUnfinishedSubBlockHeaders() {
   };
 }
 
-export function getUnfinishedBlockHeaders() {
+export function getUnfinishedBlockHeaders(wallet_name="chia") {
   return async (dispatch) => {
     const {
       data: { headers },
@@ -93,6 +95,7 @@ export function getUnfinishedBlockHeaders() {
       dispatch,
       fullNodeMessage({
         command: 'get_unfinished_block_headers',
+        wallet_name
       }),
       false,
     );
@@ -101,17 +104,17 @@ export function getUnfinishedBlockHeaders() {
   };
 }
 
-export const pingFullNode = () => {
+export const pingFullNode = (wallet_name="chia") => {
   const action = fullNodeMessage();
   action.message.command = 'ping';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
-export const getBlockChainState = () => {
+export const getBlockChainState = (wallet_name="chia") => {
   const action = fullNodeMessage();
   action.message.command = 'get_blockchain_state';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
@@ -120,15 +123,15 @@ export const getBlockChainState = () => {
 export const getLatestBlocks = () => {
   const action = fullNodeMessage();
   action.message.command = 'get_latest_block_headers';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 */
 
-export const getFullNodeConnections = () => {
+export const getFullNodeConnections = (wallet_name="chia") => {
   const action = fullNodeMessage();
   action.message.command = 'get_connections';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
@@ -151,24 +154,24 @@ export const openConnection = (host, port) => {
   };
 };
 
-export const closeConnection = (node_id) => {
+export const closeConnection = (node_id, wallet_name="chia") => {
   const action = fullNodeMessage();
   action.message.command = 'close_connection';
-  action.message.data = { node_id };
+  action.message.data = { node_id,wallet_name };
   return action;
 };
 
-export const getBlockAction = (header_hash) => {
+export const getBlockAction = (header_hash,wallet_name="chia") => {
   const action = fullNodeMessage();
   action.message.command = 'get_block';
-  action.message.data = { header_hash };
+  action.message.data = { header_hash,wallet_name };
   return action;
 };
 
-export const getBlockRecordAction = (headerHash) => {
+export const getBlockRecordAction = (headerHash,wallet_name="chia") => {
   const action = fullNodeMessage();
   action.message.command = 'get_block_record';
-  action.message.data = { header_hash: headerHash };
+  action.message.data = { header_hash: headerHash,wallet_name };
   return action;
 };
 
@@ -180,7 +183,7 @@ export const clearBlock = (header_hash) => {
   return action;
 };
 
-export function getBlock(headerHash) {
+export function getBlock(headerHash,wallet_name="chia") {
   return async (dispatch) => {
     const response = await async_api(
       dispatch,
@@ -188,6 +191,7 @@ export function getBlock(headerHash) {
         command: 'get_block',
         data: {
           header_hash: headerHash,
+          wallet_name
         },
       }),
       false,
@@ -198,7 +202,7 @@ export function getBlock(headerHash) {
   };
 }
 
-export function getBlockRecord(headerHash) {
+export function getBlockRecord(headerHash,wallet_name="chia") {
   return async (dispatch) => {
     const response = await async_api(
       dispatch,
@@ -206,6 +210,7 @@ export function getBlockRecord(headerHash) {
         command: 'get_block_record',
         data: {
           header_hash: headerHash,
+          wallet_name
         },
       }),
       false,

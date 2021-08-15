@@ -50,15 +50,12 @@ export default function App() {
   }, [locale, darkMode]);
 
   // get the daemon's uri from global storage (put there by loadConfig)
-  let daemon_uri = null;
-  let daemon_uri_flax = null;
-  let daemon_uri_goji = null;
+  let daemon_uri = {};
   if (isElectron()) {
     const electron = window.require('electron');
     const { remote: r } = electron;
-    daemon_uri = r.getGlobal('daemon_rpc_ws');
-    daemon_uri_flax = r.getGlobal('daemon_rpc_ws_flax');
-    daemon_uri_goji = r.getGlobal('daemon_rpc_ws_goji');
+    daemon_uri = { chia: r.getGlobal('daemon_rpc_ws').chia, flax: r.getGlobal('daemon_rpc_ws').flax, goji: r.getGlobal('daemon_rpc_ws').goji };
+    console.log(daemon_uri);
   }
 
   useEffect(() => {

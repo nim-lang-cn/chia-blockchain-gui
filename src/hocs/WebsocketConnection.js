@@ -1,7 +1,8 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
 import { wsConnect, wsConnecting } from '../modules/websocket';
 
 const WebSocketConnection = (props) => {
+  const store = useStore();
   const dispatch = useDispatch();
   const connected = useSelector((state) => state.websocket.connected);
   const connecting = useSelector((state) => state.websocket.connecting);

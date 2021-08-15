@@ -53,11 +53,12 @@ export default function daemonReducer(
       const { message } = action;
       const { data } = message;
       const { command } = message;
+      // console.log("action:",action);
       if (command === 'register_service') {
         return { ...state, daemon_running: true, daemon_connected: true };
       }
       if (command === 'start_service') {
-        const { service } = data;
+        const { service,wallet_name } = data;
         if (service === service_full_node) {
           return { ...state, full_node_running: true };
         }

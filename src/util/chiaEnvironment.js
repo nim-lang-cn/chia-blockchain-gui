@@ -73,6 +73,7 @@ const getChiaVersion = () => {
 
 const startChiaDaemon = () => {
   let script = getScriptPath(PY_DIST_FILE);
+  console.log("script:",script);
   let processOptions = {};
   //processOptions.detached = true;
   //processOptions.stdio = "ignore";
@@ -106,8 +107,8 @@ const startChiaDaemon = () => {
             let str = str_arr[i];
             try {
               let json = JSON.parse(str);
-              global.cert_path = json['cert'];
-              global.key_path = json['key'];
+              // global.cert_path = json['cert'];
+              // global.key_path = json['key'];
               if (cert_path && key_path) {
                 have_cert = true;
                 process.stdout.write('Have cert\n');

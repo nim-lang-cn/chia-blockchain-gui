@@ -7,10 +7,10 @@ export const harvesterMessage = () => ({
   },
 });
 
-export const pingHarvester = () => {
+export const pingHarvester = (wallet_name="chia") => {
   const action = harvesterMessage();
   action.message.command = 'ping';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
@@ -33,7 +33,7 @@ export const getPlotDirectories = () => {
 export const deletePlot = (filename) => {
   const action = harvesterMessage();
   action.message.command = 'delete_plot';
-  action.message.data = { filename };
+  action.message.data = { filename};
   return action;
 };
 

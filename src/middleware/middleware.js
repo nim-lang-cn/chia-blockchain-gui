@@ -35,24 +35,28 @@ const outgoing_message = (command, data, destination) => ({
 });
 
 const socketMiddleware = () => {
-  let socket = null;
+  let socket = { chia: null, flax: null, goji: null };
   let connected = false;
 
+  var chia = "chia";
+  var flax = "flax";
+  var goji = "goji";
   const onOpen = (store, wsConnectInterval) => (event) => {
     clearInterval(wsConnectInterval);
     connected = true;
     store.dispatch(actions.wsConnected(event.target.url));
-    store.dispatch(registerService('wallet_ui'));
-    store.dispatch(registerService(service_plotter));
+    store.dispatch(registerService('wallet_ui', chia));
+    store.dispatch(registerService(service_plotter, chia));
     if (config.local_test) {
-      store.dispatch(startServiceTest(service_wallet));
-      store.dispatch(startService(service_simulator));
+      store.dispatch(startServiceTest(service_wallet, chia));
+      store.dispatch(startService(service_simulator, chia));
     } else {
-      store.dispatch(startService(service_wallet));
-      store.dispatch(startService(service_full_node));
-      store.dispatch(startService(service_farmer));
-      store.dispatch(startService(service_harvester));
+      store.dispatch(startService(service_wallet, chia));
+      store.dispatch(startService(service_full_node, chia));
+      store.dispatch(startService(service_farmer, chia));
+      store.dispatch(startService(service_harvester, chia));
     }
+
   };
 
   const onClose = (store) => () => {
@@ -77,17 +81,16 @@ const socketMiddleware = () => {
       case 'WS_CONNECT':
         const wsConnectInterval = setInterval(() => {
           if (
-            socket !== null &&
-            (socket.readyState == 0 || socket.readyState == 1)
+            socket.chia !== null &&
+            (socket.chia.readyState == 0 || socket.chia.readyState == 1)
           ) {
             console.log('Already connected, not reconnecting.');
-            console.log(socket.readyState);
             return;
           }
-          // connect to the remote host
+
           try {
-            const key_path = remote.getGlobal('key_path');
-            const cert_path = remote.getGlobal('cert_path');
+            const key_path = remote.getGlobal('key_path').chia;
+            const cert_path = remote.getGlobal('cert_path').chia;
 
             const options = {
               cert: fs.readFileSync(cert_path),
@@ -95,25 +98,104 @@ const socketMiddleware = () => {
               rejectUnauthorized: false,
               perMessageDeflate: false,
             };
-            socket = new WS(action.host, options);
+            socket.chia = new WS(action.host.chia, options);
+
           } catch {
             connected = false;
-            store.dispatch(actions.wsDisconnected());
-            console.log('Failed connection to', action.host);
+            store.dispatch(actions.wsDisconnected(action.host.chia));
+
+            console.log('Failed connection to', action.host.chia);
             return;
           }
 
           // websocket handlers
-          socket.onmessage = onMessage(store);
-          socket.onclose = onClose(store);
-          socket.addEventListener('open', onOpen(store, wsConnectInterval));
+          socket.chia.onmessage = onMessage(store);
+          socket.chia.onclose = onClose(store);
+          socket.chia.addEventListener('open', onOpen(store, wsConnectInterval));
         }, 1000);
+
+        const flaxwsConnectInterval = setInterval(() => {
+          if (
+            socket.flax !== null &&
+            (socket.flax.readyState == 0 || socket.flax.readyState == 1)
+          ) {
+            console.log('Already connected, not reconnecting.');
+            return;
+          }
+          try {
+            const key_path = remote.getGlobal('key_path').flax;
+            const cert_path = remote.getGlobal('cert_path').flax;
+            console.log(key_path);
+            console.log(cert_path);
+            console.log(action.host.flax);
+            socket.flax = new WS(action.host.flax, {
+              cert: fs.readFileSync(cert_path),
+              key: fs.readFileSync(key_path),
+              rejectUnauthorized: false,
+              perMessageDeflate: false,
+            });
+
+          } catch {
+            connected = false;
+            store.dispatch(actions.wsDisconnected(action.host.flax));
+            console.log('Failed connection to', action.host.flax);
+            return;
+          }
+          socket.flax.onmessage = onMessage(store);
+          socket.flax.onclose = onClose(store);
+          socket.flax.addEventListener('open', onOpen(store, flaxwsConnectInterval));
+        }, 1000);
+
+        const gojiwsConnectInterval = setInterval(() => {
+          if (
+            socket.goji !== null &&
+            (socket.goji.readyState == 0 || socket.goji.readyState == 1)
+          ) {
+            console.log('Already connected, not reconnecting.');
+            return;
+          }
+          try {
+            const key_path = remote.getGlobal('key_path').goji;
+            const cert_path = remote.getGlobal('cert_path').goji;
+
+            console.log(key_path);
+            console.log(cert_path);
+            console.log(action.host.goji);
+
+            socket.goji = new WS(action.host.goji, {
+              cert: fs.readFileSync(cert_path),
+              key: fs.readFileSync(key_path),
+              rejectUnauthorized: false,
+              perMessageDeflate: false,
+            });
+
+          } catch {
+            connected = false;
+            store.dispatch(actions.wsDisconnected(action.host.goji));
+            console.log('Failed connection to', action.host.goji);
+            return;
+          }
+          socket.goji.onmessage = onMessage(store);
+          socket.goji.onclose = onClose(store);
+          socket.goji.addEventListener('open', onOpen(store, gojiwsConnectInterval));
+        }, 1000);
+
         break;
       case 'WS_DISCONNECT':
-        if (socket !== null) {
-          socket.close();
+        if (socket.chia !== null) {
+          socket.id.close();
+          socket.id = null;
         }
         socket = null;
+        if (socket.flax !== null) {
+          socket.flax.close();
+          socket.flax = null;
+
+        }
+        if (socket.goji !== null) {
+          socket.goji.close();
+          socket.goji = null;
+        }
         break;
       case 'OUTGOING_MESSAGE':
         if (connected) {
@@ -125,7 +207,20 @@ const socketMiddleware = () => {
           if (action.resolve) {
             callback_map[message.request_id] = action;
           }
-          socket.send(JSON.stringify(message));
+          if (message.hasOwnProperty("data") && message.data != undefined && message.data.hasOwnProperty("wallet_name")) {
+            if (message.data["wallet_name"] == "flax") {
+              socket.flax.send(JSON.stringify(message));
+            } else if (message.data["wallet_name"] == "goji") {
+              socket.goji.send(JSON.stringify(message));
+            } else {
+              socket.chia.send(JSON.stringify(message));
+            }
+          } else {
+            console.log("missing:",message);
+            socket.chia.send(JSON.stringify(message));
+
+          }
+
         } else {
           console.log('Socket not connected');
         }

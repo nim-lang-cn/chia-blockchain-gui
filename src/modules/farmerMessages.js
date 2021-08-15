@@ -9,7 +9,7 @@ export const farmerMessage = (message) => ({
   },
 });
 
-export const getRewardTargets = (searchForPrivateKey) => {
+export const getRewardTargets = (searchForPrivateKey,wallet_name="chia") => {
   return async (dispatch) => {
     const { data } = await async_api(
       dispatch,
@@ -17,6 +17,7 @@ export const getRewardTargets = (searchForPrivateKey) => {
         command: 'get_reward_targets',
         data: {
           search_for_private_key: searchForPrivateKey,
+          wallet_name
         },
       }),
       false,
@@ -26,7 +27,7 @@ export const getRewardTargets = (searchForPrivateKey) => {
   };
 };
 
-export const setRewardTargets = (farmerTarget, poolTarget) => {
+export const setRewardTargets = (farmerTarget, poolTarget,wallet_name="chia") => {
   return async (dispatch) => {
     const response = await async_api(
       dispatch,
@@ -35,6 +36,7 @@ export const setRewardTargets = (farmerTarget, poolTarget) => {
         data: {
           farmer_target: farmerTarget,
           pool_target: poolTarget,
+          wallet_name,
         },
       }),
       false,
@@ -44,47 +46,48 @@ export const setRewardTargets = (farmerTarget, poolTarget) => {
   };
 };
 
-export const pingFarmer = () => {
+export const pingFarmer = (wallet_name="chia") => {
   const action = farmerMessage();
   action.message.command = 'ping';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
-export const getLatestChallenges = () => {
+export const getLatestChallenges = (wallet_name="chia") => {
   const action = farmerMessage();
   action.message.command = 'get_signage_points';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
-export const getFarmerConnections = () => {
+export const getFarmerConnections = (wallet_name="chia") => {
   const action = farmerMessage();
   action.message.command = 'get_connections';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
-export const openConnection = (host, port) => {
+export const openConnection = (host, port,wallet_name="chia") => {
   const action = farmerMessage();
   action.message.command = 'open_connection';
-  action.message.data = { host, port };
+  action.message.data = { host, port,wallet_name };
   return action;
 };
 
-export const closeConnection = (node_id) => {
+export const closeConnection = (node_id,wallet_name="chia") => {
   const action = farmerMessage();
   action.message.command = 'close_connection';
-  action.message.data = { node_id };
+  action.message.data = { node_id,wallet_name };
   return action;
 };
 
-export const getPoolState = () => {
+export const getPoolState = (wallet_name="chia") => {
   return async (dispatch) => {
     const { data } = await async_api(
       dispatch,
       farmerMessage({
         command: 'get_pool_state',
+        wallet_name
       }),
       false,
       true,
@@ -97,6 +100,7 @@ export const getPoolState = () => {
 export const setPayoutInstructions = (
   launcherId,
   payoutInstructions,
+  wallet_name="chia"
 ) => {
   return async (dispatch) => {
     const { data } = await async_api(
@@ -106,6 +110,7 @@ export const setPayoutInstructions = (
         data: {
           launcher_id: launcherId,
           payout_instructions: payoutInstructions,
+          wallet_name
         },
       }),
       false,
@@ -124,12 +129,13 @@ export const setPayoutInstructions = (
   };
 };
 
-export function getHarvesters() {
+export function getHarvesters(wallet_name="chia") {
   return async (dispatch) => {
     const { data } = await async_api(
       dispatch,
       farmerMessage({
         command: 'get_harvesters',
+        wallet_name
       }),
       false,
     );
@@ -138,7 +144,7 @@ export function getHarvesters() {
   };
 }
 
-export function getPoolLoginLink(launcherId) {
+export function getPoolLoginLink(launcherId,wallet_name="chia") {
   return async (dispatch) => {
     const { data } = await async_api(
       dispatch,
@@ -146,6 +152,7 @@ export function getPoolLoginLink(launcherId) {
         command: 'get_pool_login_link',
         data: {
           launcher_id: launcherId,
+          wallet_name,
         },
       }),
       false,

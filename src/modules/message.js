@@ -25,7 +25,7 @@ import config from '../config/config';
 const { backup_host } = config;
 
 // TODO this is not doing anything because wallet id is missing
-export const clearSend = () => {
+export const clearSend = (wallet_name="chia") => {
   const action = {
     type: 'CLEAR_SEND',
     mesasge: '',
@@ -89,7 +89,7 @@ export function format_message(command, data) {
 }
 
 export function getWalletsMessage() {
-  return format_message('get_wallets');
+  return format_message('get_wallets', ['chia','flax','goji']);
 }
 
 export function getTransactionMessage(transactionId) {
@@ -147,16 +147,17 @@ export function createPoolWalletMessage(initialTargetState, fee) {
   });
 }
 
-export function deleteUnconfirmedTransactionsMessage(walletId) {
+export function deleteUnconfirmedTransactionsMessage(walletName,walletId) {
   return format_message('delete_unconfirmed_transactions', {
+    wallet_name: walletName,
     wallet_id: walletId,
   });
 }
 
-export const pingWallet = () => {
+export const pingWallet = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'ping';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
@@ -164,14 +165,13 @@ export const get_balance_for_wallet = (name,id) => {
   const action = walletMessage();
   action.message.command = 'get_wallet_balance';
   action.message.data = { wallet_name:name, wallet_id: id };
-  console.log(action);
   return action;
 };
 
-export const get_farmed_amount = () => {
+export const get_farmed_amount = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'get_farmed_amount';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
@@ -187,10 +187,10 @@ export const send_transaction = (wallet_id, amount, fee, address) => {
   return action;
 };
 
-export const genereate_mnemonics = () => {
+export const genereate_mnemonics = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'generate_mnemonic';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
@@ -298,21 +298,24 @@ export const check_delete_key_action = (fingerprint) => {
   };
 };
 
-export const delete_all_keys = () => {
+export const delete_all_keys = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'delete_all_keys';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
 export const log_in = (fingerprint) => {
   const action = walletMessage();
+
   action.message.command = 'log_in';
   action.message.data = {
     fingerprint,
     host: backup_host,
     type: 'normal',
   };
+  console.log("log_in:",action);
+
   return action;
 };
 
@@ -469,38 +472,38 @@ export const get_address = (wallet_name, wallet_id, new_address) => {
   return action;
 };
 
-export const farm_block = (address) => {
+export const farm_block = (address, wallet_name = "chia") => {
   const action = walletMessage();
   action.message.command = 'farm_block';
-  action.message.data = { address };
+  action.message.data = { address, wallet_name };
   return action;
 };
 
-export const get_height_info = () => {
+export const get_height_info = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'get_height_info';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
-export const getNetworkInfo = () => {
+export const getNetworkInfo = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'get_network_info';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
-export const get_sync_status = () => {
+export const get_sync_status = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'get_sync_status';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
-export const get_connection_info = () => {
+export const get_connection_info = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'get_connections';
-  action.message.data = {};
+  action.message.data = {wallet_name};
   return action;
 };
 
@@ -555,7 +558,7 @@ export const create_cc_action = (amount, fee) => (dispatch) =>
       dispatch(createState(true, false));
       if (response.data.success) {
         // Go to wallet
-        dispatch(format_message('get_wallets', {}));
+        dispatch(format_message('get_wallets', ['chia','flax','goji']));
         dispatch(showCreateBackup(true));
         dispatch(createState(true, false));
         dispatch(changeCreateWallet(ALL_OPTIONS));
@@ -573,7 +576,7 @@ export const create_cc_for_colour_action = (colour, fee) => (dispatch) =>
       if (response.data.success) {
         // Go to wallet
         dispatch(showCreateBackup(true));
-        dispatch(format_message('get_wallets', {}));
+        dispatch(format_message('get_wallets', ['chia','flax','goji']));
         dispatch(changeCreateWallet(ALL_OPTIONS));
       } else {
         const { error } = response.data;
@@ -647,7 +650,7 @@ export const create_rl_admin_action =
       dispatch(createState(true, false));
       if (response.data.success) {
         // Go to wallet
-        dispatch(format_message('get_wallets', {}));
+        dispatch(format_message('get_wallets', ['chia','flax','goji']));
         dispatch(showCreateBackup(true));
         dispatch(createState(true, false));
         dispatch(changeCreateWallet(ALL_OPTIONS));
@@ -657,7 +660,7 @@ export const create_rl_admin_action =
       }
     });
 
-export const create_rl_user = () => {
+export const create_rl_user = (wallet_name="chia") => {
   const action = walletMessage();
   action.message.command = 'create_new_wallet';
   action.message.data = {
@@ -673,7 +676,7 @@ export const create_rl_user_action = () => (dispatch) =>
     dispatch(createState(true, false));
     if (response.data.success) {
       // Go to wallet
-      dispatch(format_message('get_wallets', {}));
+      dispatch(format_message('get_wallets', ['chia','flax','goji']));
       dispatch(createState(true, false));
       dispatch(changeCreateWallet(ALL_OPTIONS));
     } else {
@@ -735,7 +738,7 @@ export const rl_set_user_info_action =
       dispatch(createState(true, false));
       if (response.data.success) {
         // Go to wallet
-        dispatch(format_message('get_wallets', {}));
+        dispatch(format_message('get_wallets', ['chia','flax','goji']));
         dispatch(showCreateBackup(true));
         dispatch(createState(true, false));
       } else {
@@ -782,7 +785,7 @@ export const create_did_action =
       dispatch(createState(true, false));
       if (response.data.success) {
         // Go to wallet
-        dispatch(format_message('get_wallets', {}));
+        dispatch(format_message('get_wallets', ['chia','flax','goji']));
         dispatch(showCreateBackup(true));
         dispatch(createState(true, false));
         dispatch(changeCreateWallet(ALL_OPTIONS));
@@ -809,7 +812,7 @@ export const recover_did_action = (filename) => (dispatch) =>
     dispatch(createState(true, false));
     if (response.data.success) {
       // Go to wallet
-      dispatch(format_message('get_wallets', {}));
+      dispatch(format_message('get_wallets', ['chia','flax','goji']));
       dispatch(showCreateBackup(false));
       dispatch(createState(true, false));
       dispatch(changeCreateWallet(ALL_OPTIONS));
@@ -841,7 +844,7 @@ export const did_update_recovery_ids_action =
       did_update_recovery_ids(wallet_id, new_list, num_verifications_required),
       true,
     ).then((response) => {
-      dispatch(format_message('get_wallets', {}));
+      dispatch(format_message('get_wallets', ['chia','flax','goji']));
       dispatch(createState(true, false));
     });
 

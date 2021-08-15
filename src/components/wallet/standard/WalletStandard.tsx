@@ -493,7 +493,7 @@ function SendCard(props: SendCardProps) {
 
       <Form methods={methods} onSubmit={handleSubmit}>
         <Grid spacing={2} container>
-          <Grid xs={12} item>
+          <Grid xs={12} md={7} item>
             <ChiaTextField
               name="address"
               variant="filled"
@@ -503,7 +503,7 @@ function SendCard(props: SendCardProps) {
               label={<Trans>Address / Puzzle hash</Trans>}
             />
           </Grid>
-          <Grid xs={12} md={6} item>
+          <Grid xs={12} md={3} item>
             <Amount
               id="filled-secondary"
               variant="filled"
@@ -514,7 +514,7 @@ function SendCard(props: SendCardProps) {
               fullWidth
             />
           </Grid>
-          <Grid xs={12} md={6} item>
+          <Grid xs={12} md={2} item>
             <Fee
               id="filled-secondary"
               variant="filled"

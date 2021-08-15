@@ -69,11 +69,11 @@ export function getWalletBalance(walletName: string, walletId: number) {
   };
 }
 
-export function deleteUnconfirmedTransactions(walletId: number) {
+export function deleteUnconfirmedTransactions(walletName:string,walletId: number) {
   return async (dispatch): Promise<void> => {
     await async_api(
       dispatch,
-      deleteUnconfirmedTransactionsMessage(walletId),
+      deleteUnconfirmedTransactionsMessage(walletName,walletId),
       false,
     );
   };
@@ -228,6 +228,7 @@ export default function incomingReducer(
         };
       }
       if (command === 'log_in') {
+        console.log("logged_in");
         return {
           ...state,
           logged_in: success,
@@ -243,7 +244,6 @@ export default function incomingReducer(
         };
       } else if (command === 'get_public_keys' && success) {
         const { public_key_fingerprints } = data;
-
         return {
           ...state,
           public_key_fingerprints,

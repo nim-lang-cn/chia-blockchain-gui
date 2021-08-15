@@ -34,6 +34,7 @@ export default function walletMenuReducer(
       return { ...initialState };
     case 'WALLET_MENU':
       const { item, id ,name} = action;
+      console.log(item,id,name);
       return {
         ...state,
         view: item,
